@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 import { IoMoon, IoSunny } from "react-icons/io5";
 import ThemeContext from "../context/themeProvder";
 import imgLogo from "/Artboard1.png";
+import Login from "./Login";
+import { FiShoppingCart } from "react-icons/fi";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const { theme, toggle } = useContext(ThemeContext);
   const [showNavbar, setShowNavbar] = useState(true);
@@ -36,7 +39,7 @@ const Navbar = () => {
         ${
           theme === "dark"
             ? "bg-gradient-to-tr from-gray-900 via-gray-950 to-black text-white border-t border-gray-700"
-          : "bg-white text-gray-800 border-t border-gray-200 shadow-sm"
+            : "bg-white text-gray-800 border-t border-gray-200 shadow-sm"
         }
         ${showNavbar ? "translate-y-0" : "-translate-y-full"}
       `}
@@ -68,8 +71,35 @@ const Navbar = () => {
               {theme === "light" ? <IoSunny /> : <IoMoon />}
             </button>
 
-            <button className="px-4 py-2 text-sm font-medium  rounded-lg hover:bg-blue-700 bg-blue-600">
+            <button
+              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 
+                      ${
+                        theme === "dark"
+                          ? "bg-indigo-600 hover:bg-indigo-700 text-white"
+                          : "bg-blue-600 hover:bg-blue-700 text-white"
+                      } focus:outline-none focus:ring-2 focus:ring-offset-1 ${
+                theme === "dark"
+                  ? "focus:ring-indigo-500"
+                  : "focus:ring-blue-400"
+              }`}
+              onClick={() => setIsLoginOpen(true)}
+            >
               Login
+            </button>
+
+            <button
+              className={`relative flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200              
+                  ${
+                    theme === "dark"
+                      ? "bg-green-600 hover:bg-green-700 text-white"
+                      : "bg-green-500 hover:bg-green-600 text-white"
+                  } focus:outline-none focus:ring-2 focus:ring-offset-1 ${
+                theme === "dark"
+                  ? "focus:ring-green-500"
+                  : "focus:ring-green-400"
+              }`}
+            >
+              <FiShoppingCart className="mr-2 text-lg" />
             </button>
 
             <button
@@ -136,7 +166,6 @@ const Navbar = () => {
                         <Link
                           to="/gaming"
                           className="block p-2 rounded hover:text-blue-700 "
-                          
                         >
                           Gaming-laptop
                         </Link>
@@ -181,6 +210,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </div>
   );
 };
