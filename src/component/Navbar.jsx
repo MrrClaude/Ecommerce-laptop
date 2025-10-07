@@ -6,6 +6,7 @@ import ThemeContext from "../context/themeProvder";
 import imgLogo from "/Artboard1.png";
 import Login from "./Login";
 
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -54,7 +55,7 @@ const Navbar = () => {
           >
             <img src={imgLogo} className="h-20" alt="Logo" />
             <span
-              className={`self-center text-2xl font-bold ${
+              className={`self-center text-2xl font-bold hidden md:inline ${
                 theme === "dark" ? "text-indigo-700" : "text-black"
               }`}
             >
@@ -75,7 +76,7 @@ const Navbar = () => {
             </button>
 
             <button
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 
+              className={`px-4 py-2 text-sm font-medium  rounded-lg transition-all duration-200 
                       ${
                         theme === "dark"
                           ? "bg-indigo-600 hover:bg-indigo-700 text-white"

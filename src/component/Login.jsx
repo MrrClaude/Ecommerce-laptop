@@ -28,7 +28,6 @@ const Login = ({ isOpen, onClose }) => {
               ${isDark ? "bg-gray-800 text-white" : "bg-white text-gray-900"}
             `}
           >
-            {/* ✕ Close Button */}
             <button
               onClick={onClose}
               className={`absolute top-3 right-3 text-lg ${
@@ -39,8 +38,6 @@ const Login = ({ isOpen, onClose }) => {
             >
               ✕
             </button>
-
-            {/* Header */}
             <div
               className={`text-center mb-6 border-b pb-3 ${
                 isDark ? "border-gray-700" : "border-gray-200"
@@ -57,8 +54,6 @@ const Login = ({ isOpen, onClose }) => {
                 Sign in to continue to your account
               </p>
             </div>
-
-            {/* Form */}
             <form className="space-y-4">
               <div>
                 <label
