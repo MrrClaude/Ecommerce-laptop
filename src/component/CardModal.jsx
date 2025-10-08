@@ -20,6 +20,8 @@ const CardModal = () => {
 
   const handleAddToCart = () => setCartCount(cartCount + quantity);
 
+
+  if (!selectedProduct) return null;
   return (
     <div className="w-full mx-auto mt-[70px] py-10">
       <div className="container mx-auto px-4 py-8">
@@ -43,8 +45,6 @@ const CardModal = () => {
               ))}
             </div>
           </div>
-
-          {/* Product Details */}
           <div className="w-full md:w-1/2 px-4">
             <h2 className="text-3xl font-bold mb-2">
               Premium Wireless Headphones
@@ -54,8 +54,6 @@ const CardModal = () => {
               <span className="text-2xl font-bold mr-2">$349.99</span>
               <span className="text-gray-500 line-through">$399.99</span>
             </div>
-
-            {/* Rating */}
             <div className="flex items-center mb-4">
               {[...Array(5)].map((_, idx) => (
                 <svg
@@ -80,8 +78,6 @@ const CardModal = () => {
               cancellation with these wireless headphones. Perfect for music
               lovers and frequent travelers.
             </p>
-
-            {/* Color selection */}
             <div className="mb-6">
               <h3 className="text-lg font-semibold mb-2">Color:</h3>
               <div className="flex space-x-2">
@@ -91,7 +87,6 @@ const CardModal = () => {
               </div>
             </div>
 
-            {/* Quantity */}
             <div className="mb-6">
               <label
                 htmlFor="quantity"
