@@ -5,6 +5,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import ThemeContext from "../context/themeProvder";
 import imgLogo from "/Artboard1.png";
 import Login from "./Login";
+import { FaCartShopping } from "react-icons/fa6";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -102,7 +103,7 @@ const Navbar = () => {
                   : "focus:ring-green-400"
               }`}
             >
-              <FiShoppingCart className="mr-2 text-lg" />
+              <FaCartShopping className="mr-2 text-lg" />
             </button>
 
             <button
