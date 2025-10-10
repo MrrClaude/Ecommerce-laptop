@@ -6,7 +6,6 @@ import ThemeContext from "../context/themeProvder";
 import imgLogo from "/Artboard1.png";
 import Login from "./Login";
 
-
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -148,8 +147,11 @@ const Navbar = () => {
               </li>
               <li className="relative">
                 <button
-                  onMouseEnter={() => setIsDropdownOpen(true)}
-                  onClick={() => setIsDropdownOpen(false)}
+                  onMouseEnter={() =>
+                    window.innerWidth >= 768 && setIsDropdownOpen(true)
+                  }
+                 
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   className="flex items-center py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   Product ▼

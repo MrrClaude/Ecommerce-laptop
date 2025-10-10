@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Carousel from "../component/Carousel";
-import { div } from "framer-motion/client";
 import ThemeContext from "../context/themeProvder";
 
 const cards = [
@@ -125,7 +124,13 @@ const cards = [
 const Gaming = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className="w-full mx-auto mt-[90px] py-10">
+    <div
+      className={` w-full py-10 mt-[90px] m-auto${
+        theme === "dark"
+          ? "border-gray-700 bg-gradient-to-tr from-gray-900 via-gray-950 to-black text-white"
+          : "border-gray-200 bg-white text-gray-800 shadow-sm"
+      }`}
+    >
       <Carousel />
       <div className=" mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5">
         {cards.map((card, index) => (

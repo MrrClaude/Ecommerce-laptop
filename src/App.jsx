@@ -10,10 +10,12 @@ import Service from "./pages/Service";
 import Gaming from "./ProductPages/Gaming";
 import Business from "./ProductPages/Business";
 import Accessories from "./ProductPages/Accessories";
+import ProductContext from "./context/ProductContext";
 
 const App = () => {
   const { theme } = useContext(ThemeContext);
-
+  const {products} = useContext(ProductContext);
+  console.log(products);
   return (
     <div className={`${theme}`}>
       <nav>
