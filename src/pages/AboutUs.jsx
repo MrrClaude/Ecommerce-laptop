@@ -4,6 +4,7 @@ import { FaBolt, FaCogs, FaPalette } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "../StyleCss/animation.css";
+import { Link } from "react-router-dom";
 const sectionVariant = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 }
@@ -249,7 +250,7 @@ const AboutUs = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Discover how MSI laptops can elevate your gaming and productivity to the next level.
           </p>
-          <button
+          <Link to="/gaming"
             className={`text-primary-600 font-bold px-8 py-3 rounded-lg transition duration-300 shadow-lg ${
               theme === "dark"
                 ? "bg-indigo-900 hover:bg-gray-200"
@@ -257,7 +258,7 @@ const AboutUs = () => {
             }`}
           >
             Shop Now
-          </button>
+          </Link>
         </motion.section>
       </main>
     </div>
