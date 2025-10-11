@@ -99,15 +99,15 @@ const cards = [
   },
   {
     id: 4,
-    img: "https://asset.msi.com/resize/image/global/product/product_8_20180207115102_5a7a77a607be4.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+    img: "https://asset.msi.com/resize/image/global/product/product_17495443623e730f055a54ef766d257829d0be07ba.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     smallImg: [
-      "https://static0.pocketlintimages.com/wordpress/wp-content/uploads/144117-laptops-news-msi-unveils-new-line-of-gaming-laptops-including-the-world%E2%80%99s-first-intel-core-i9-powered-laptop-image1-vlu8d01wb5.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdXNNUKMYMasP6nomQl6d9n7hejCTTnbwPw&s",
-      "https://static0.pocketlintimages.com/wordpress/wp-content/uploads/144117-laptops-news-msi-unveils-new-line-of-gaming-laptops-including-the-world%E2%80%99s-first-intel-core-i9-powered-laptop-image1-vlu8d01wb5.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdXNNUKMYMasP6nomQl6d9n7hejCTTnbwPw&s",
+      "https://asset.msi.com/resize/image/global/product/product_1749544362d81c2454586abe8239e84b138156e423.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_1749544364e2abe76487a4a22b2c7998633292fbc5.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_1749544364d318aae473b3f4b26143b83776736043.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_17495443670cd5fa9c9035765c2b56e2e7dcd86768.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     ],
-    title: "MSI",
-    desc: "Designed for serious gamers — enjoy smooth gameplay with next-gen graphics.",
+    title: "Stealth A16 AI+ Mercedes-AMG Motorsport A3XW",
+    desc: "Powered by NVIDIA Blackwell, GeForce RTX™ 50 Series Laptop GPUs bring game-changing capabilities to gamers and creators. Equipped with a massive level of AI horsepower, the RTX 50 Series enables new experiences and next-level graphics fidelity.",
     stars: [
       "http://www.w3.org/2000/svg",
       "http://www.w3.org/2000/svg",
@@ -116,178 +116,191 @@ const cards = [
       "http://www.w3.org/2000/svg",
     ],
     list: [
-      "Up to Intel® Core™ i7-13620H processor",
+      "AMD Ryzen™ AI 9 HX 370 Processor",
       "Windows 11 Home / Windows 11 Pro MSI recommends Windows 11 Pro for business.",
-      "Up to GeForce RTX™ 4060 Laptop GPU 8GB GDDR6 Powered by NVIDIA DLSS 3, ultra-efficient Ada Lovelace arch, and Max-Q Technologies.",
-      "17.3 Full HD (1920x1080),144 Hz Refresh Rate, IPS-Level panel",
-      "Discrete Graphics mode(MUX design) squeezes the performance to the extreme level.",
-      "Exclusive Cooler Boost 5 Technology",
-      "MSI Center with exclusive gaming mode",
-      "MSI App Player for seamless gaming experience between mobile and PC",
-      "High-Resolution Audio ready",
+      "Latest GeForce RTX™ 5070 Laptop GPU 8GB GDDR7",
+      "NVIDIA Studio-validated for creators; preinstalled with Studio Drivers",
+      "16 QHD+ (2560x1600), 16:10, 240Hz Refresh Rate, 100% DCI-P3 (Typical), VESA DisplayHDR™ True Black 600, OLED panel",
+      "19.95 mm thickness & 2.1 kg weight",
+      "6-Speaker Sound System by Dynaudio",
+      "99.9Whr Battery Capacity",
+      "Per-Key RGB Gaming Keyboard by SteelSeries with Copilot Key",
     ],
     rating: "5.0",
     price: 1800,
   },
   {
     id: 5,
-    img: "https://asset.msi.com/resize/image/global/product/product_8_20180207115102_5a7a77a607be4.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+    img: "https://asset.msi.com/resize/image/global/product/product_17213735069e6700479bf8a52506d088bdb1061544.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     smallImg: [
-      "https://static0.pocketlintimages.com/wordpress/wp-content/uploads/144117-laptops-news-msi-unveils-new-line-of-gaming-laptops-including-the-world%E2%80%99s-first-intel-core-i9-powered-laptop-image1-vlu8d01wb5.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdXNNUKMYMasP6nomQl6d9n7hejCTTnbwPw&s",
-      "https://static0.pocketlintimages.com/wordpress/wp-content/uploads/144117-laptops-news-msi-unveils-new-line-of-gaming-laptops-including-the-world%E2%80%99s-first-intel-core-i9-powered-laptop-image1-vlu8d01wb5.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdXNNUKMYMasP6nomQl6d9n7hejCTTnbwPw&s",
+      "https://asset.msi.com/resize/image/global/product/product_172137352705b2cb53f634437c3684f0acf7dfcd08.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_173753972718edd16a4f6a01c1d2f71c87e9028ee7.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_1721373493a21beace6ab2267b48e41effee579cc2.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_1721373493a21beace6ab2267b48e41effee579cc2.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     ],
-    title: "MSI",
-    desc: "Performance meets affordability — the perfect gaming entry-level laptop.",
+    title: "Stealth 18 AI Studio A1V",
+    desc: "The latest Intel® Core™ Ultra 9 processor 185H represents a groundbreaking advancement in processing power, featuring Intel's first integrated NPU for power-efficient AI acceleration and local inference on the laptop . With cutting-edge architecture and a high core count, it offers unprecedented performance for a wide range of applications, from gaming to scientific computing.",
     stars: [
+      "http://www.w3.org/2000/svg",
       "http://www.w3.org/2000/svg",
       "http://www.w3.org/2000/svg",
       "http://www.w3.org/2000/svg",
     ],
     list: [
-      "Up to Intel® Core™ i7-13620H processor",
+      "Up to the latest Intel® Core™ Ultra 9 processor 185H",
       "Windows 11 Home / Windows 11 Pro MSI recommends Windows 11 Pro for business.",
-      "Up to GeForce RTX™ 4060 Laptop GPU 8GB GDDR6 Powered by NVIDIA DLSS 3, ultra-efficient Ada Lovelace arch, and Max-Q Technologies.",
-      "17.3 Full HD (1920x1080),144 Hz Refresh Rate, IPS-Level panel",
-      "Discrete Graphics mode(MUX design) squeezes the performance to the extreme level.",
-      "Exclusive Cooler Boost 5 Technology",
-      "MSI Center with exclusive gaming mode",
-      "MSI App Player for seamless gaming experience between mobile and PC",
-      "High-Resolution Audio ready",
+      "Up to latest GeForce RTX™ 4090 Laptop GPU 16GB GDDR6",
+      "NVIDIA® GeForce RTX™ Studio Laptop",
+      "18 UHD+ (3840x2400), 16:10, MiniLED, 120Hz Refresh Rate, 100% DCI-P3 (Typ.), VESA DisplayHDR™ 1000 Certified, IPS-Level panel",
+      "2.89kg & 19.9mm (est.)",
+      "6-Speaker Sound System by Dynaudio",
+      "99.9Whr Battery Capacity",
+      "IR FHD webcam with Webcam Shutter, featuring HDR & 3D Noise Reduction Plus",
     ],
-    rating: "3.5",
-    price: 850,
+    rating: "4.0",
+    price: 2300,
   },
   {
     id: 6,
-    img: "https://asset.msi.com/resize/image/global/product/product_8_20180207115102_5a7a77a607be4.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+    img: "https://asset.msi.com/resize/image/global/product/product_168992322098c560c8d61e7361c1d135fe5b39c7f0.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     smallImg: [
-      "https://static0.pocketlintimages.com/wordpress/wp-content/uploads/144117-laptops-news-msi-unveils-new-line-of-gaming-laptops-including-the-world%E2%80%99s-first-intel-core-i9-powered-laptop-image1-vlu8d01wb5.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdXNNUKMYMasP6nomQl6d9n7hejCTTnbwPw&s",
-      "https://static0.pocketlintimages.com/wordpress/wp-content/uploads/144117-laptops-news-msi-unveils-new-line-of-gaming-laptops-including-the-world%E2%80%99s-first-intel-core-i9-powered-laptop-image1-vlu8d01wb5.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdXNNUKMYMasP6nomQl6d9n7hejCTTnbwPw&s",
+      "https://asset.msi.com/resize/image/global/product/product_166814746668f3a78cc88ed52f5c26ddb1ccdcd62a.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_166814746934a9ed401cb548221b600e76cd86ae71.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_1668147469e4308356158a9ee978a81088a9313e75.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_1668147471bfb422e68c23700dc0a8ce78ffb25e6d.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     ],
-    title: "MSI",
-    desc: "Sleek, modern, and powerful — perfect balance of work and play.",
+    title: "MSI Katana 15 B13V",
+    desc: "Sharpen your game with the legendary Dragon's Blade. A fierce machine for dedicated gamers.",
     stars: [
-      "http://www.w3.org/2000/svg",
-      "http://www.w3.org/2000/svg",
-      "http://www.w3.org/2000/svg",
-      "http://www.w3.org/2000/svg",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
     ],
     list: [
-      "Up to Intel® Core™ i7-13620H processor",
+      "Up to Intel® Core™ i7-13620H Processor",
       "Windows 11 Home / Windows 11 Pro MSI recommends Windows 11 Pro for business.",
-      "Up to GeForce RTX™ 4060 Laptop GPU 8GB GDDR6 Powered by NVIDIA DLSS 3, ultra-efficient Ada Lovelace arch, and Max-Q Technologies.",
-      "17.3 Full HD (1920x1080),144 Hz Refresh Rate, IPS-Level panel",
-      "Discrete Graphics mode(MUX design) squeezes the performance to the extreme level.",
-      "Exclusive Cooler Boost 5 Technology",
-      "MSI Center with exclusive gaming mode",
-      "MSI App Player for seamless gaming experience between mobile and PC",
+      "Up to GeForce RTX™ 4060 Laptop GPU 8GB GDDR6 with DLSS 3 and Max-Q Technologies.",
+      "15.6 Full HD (1920x1080), 144 Hz Refresh Rate, IPS-Level panel",
+      "Discrete Graphics mode(MUX design) for extreme performance.",
+      "Exclusive Cooler Boost 5 Technology with Shared-Pipe Design",
+      "4-Zone RGB Gaming Keyboard with highlighted WASD keys",
+      "MSI App Player for seamless mobile and PC gaming",
       "High-Resolution Audio ready",
     ],
-    rating: "4.2",
-    price: 1300,
-  },
-  {
-    id: 7,
-    img: "https://asset.msi.com/resize/image/global/product/product_8_20180207115102_5a7a77a607be4.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
-    smallImg: [
-      "https://static0.pocketlintimages.com/wordpress/wp-content/uploads/144117-laptops-news-msi-unveils-new-line-of-gaming-laptops-including-the-world%E2%80%99s-first-intel-core-i9-powered-laptop-image1-vlu8d01wb5.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdXNNUKMYMasP6nomQl6d9n7hejCTTnbwPw&s",
-      "https://static0.pocketlintimages.com/wordpress/wp-content/uploads/144117-laptops-news-msi-unveils-new-line-of-gaming-laptops-including-the-world%E2%80%99s-first-intel-core-i9-powered-laptop-image1-vlu8d01wb5.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdXNNUKMYMasP6nomQl6d9n7hejCTTnbwPw&s",
-    ],
-    title: "MSI",
-    desc: "Compact design with desktop-grade performance for high-end gaming.",
-    stars: [
-      "http://www.w3.org/2000/svg",
-      "http://www.w3.org/2000/svg",
-      "http://www.w3.org/2000/svg",
-      "http://www.w3.org/2000/svg",
-    ],
-    list: [
-      "Up to Intel® Core™ i7-13620H processor",
-      "Windows 11 Home / Windows 11 Pro MSI recommends Windows 11 Pro for business.",
-      "Up to GeForce RTX™ 4060 Laptop GPU 8GB GDDR6 Powered by NVIDIA DLSS 3, ultra-efficient Ada Lovelace arch, and Max-Q Technologies.",
-      "17.3 Full HD (1920x1080),144 Hz Refresh Rate, IPS-Level panel",
-      "Discrete Graphics mode(MUX design) squeezes the performance to the extreme level.",
-      "Exclusive Cooler Boost 5 Technology",
-      "MSI Center with exclusive gaming mode",
-      "MSI App Player for seamless gaming experience between mobile and PC",
-      "High-Resolution Audio ready",
-    ],
-    rating: "4.3",
+    rating: "4.5",
     price: 1250,
   },
   {
-    id: 8,
-    img: "https://asset.msi.com/resize/image/global/product/product_8_20180207115102_5a7a77a607be4.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+    id: 7,
+    img: "https://asset.msi.com/resize/image/global/product/product_1710832427221ddfe311d964a72524b062853b9cf6.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     smallImg: [
-      "https://static0.pocketlintimages.com/wordpress/wp-content/uploads/144117-laptops-news-msi-unveils-new-line-of-gaming-laptops-including-the-world%E2%80%99s-first-intel-core-i9-powered-laptop-image1-vlu8d01wb5.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdXNNUKMYMasP6nomQl6d9n7hejCTTnbwPw&s",
-      "https://static0.pocketlintimages.com/wordpress/wp-content/uploads/144117-laptops-news-msi-unveils-new-line-of-gaming-laptops-including-the-world%E2%80%99s-first-intel-core-i9-powered-laptop-image1-vlu8d01wb5.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdXNNUKMYMasP6nomQl6d9n7hejCTTnbwPw&s",
+      "https://asset.msi.com/resize/image/global/product/product_17108324276d0872836dfddeca71a41a6352ffb9df.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_166623067192bcedebe0e593705d46f080a4ba0a09.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_1666230671cfcf9af85b2fed6bd4d725febb0677a6.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_16662306748071a16fe9336a450e6677396d0f9855.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     ],
-    title: "MSI",
-    desc: "A stunning 4K display with unbeatable color accuracy for creative professionals.",
+    title: "MSI Cyborg 15 A13V",
+    desc: "Cyber Up! A thin and light gaming laptop with a futuristic, translucent design.",
     stars: [
-      "http://www.w3.org/2000/svg",
-      "http://www.w3.org/2000/svg",
-      "http://www.w3.org/2000/svg",
-      "http://www.w3.org/2000/svg",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
     ],
     list: [
       "Up to Intel® Core™ i7-13620H processor",
       "Windows 11 Home / Windows 11 Pro MSI recommends Windows 11 Pro for business.",
-      "Up to GeForce RTX™ 4060 Laptop GPU 8GB GDDR6 Powered by NVIDIA DLSS 3, ultra-efficient Ada Lovelace arch, and Max-Q Technologies.",
-      "17.3 Full HD (1920x1080),144 Hz Refresh Rate, IPS-Level panel",
-      "Discrete Graphics mode(MUX design) squeezes the performance to the extreme level.",
-      "Exclusive Cooler Boost 5 Technology",
-      "MSI Center with exclusive gaming mode",
-      "MSI App Player for seamless gaming experience between mobile and PC",
+      "Up to latest GeForce RTX™ 4060 Laptop GPU 8GB GDDR6 with DLSS 3.",
+      "15.6” Full HD (1920x1080), 144 Hz Refresh Rate, IPS-Level panel (Optional)",
+      "Thin & Light Body: 1.98kg weight and 21.95mm thinness.",
+      "Translucent Material chassis for a see-through aesthetic",
+      "Highlighted neon WASD keys for quick in-game movement",
+      "Exclusive Cooler Boost Technology",
       "High-Resolution Audio ready",
     ],
-    rating: "4.7",
-    price: 1600,
+    rating: "3.9",
+    price: 1100,
+  },
+  {
+    id: 8,
+    img: "https://asset.msi.com/resize/image/global/product/product_168992163822a0297eadb78d9701b2c711f8fc3a90.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+    smallImg: [
+      "https://asset.msi.com/resize/image/global/product/product_1664524194335bf3913159e2ae338d03a2328fc625.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+      "https://asset.msi.com/resize/image/global/product/product_1664524194c588c7d7dd260bb5c2af545827311643.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+      "https://asset.msi.com/resize/image/global/product/product_16645243712e18daca22397448e77bfb07a9805d68.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+      "https://asset.msi.com/resize/image/global/product/product_1664523795b9302978ae2b2cc4869292d68505a922.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+    ],
+    title: "MSI Pulse 17 B13V",
+    desc: "Pulsating Power. Rule the galaxy with a sci-fi inspired, high-performance machine.",
+    stars: [
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+    ],
+    list: [
+      "Up to Intel® Core™ i7-13700H processor (higher tier than 13620H)",
+      "Windows 11 Home / Windows 11 Pro MSI recommends Windows 11 Pro for business.",
+      "Up to NVIDIA® GeForce RTX™ 4070 Laptop GPU 8GB GDDR6 (higher GPU option)",
+      "17.3 Thin Bezel Full HD (1920x1080), IPS-Level 144Hz panel",
+      "Discrete Graphics Mode (MUX Design)",
+      "CPU-GPU Share-Pipe Design for enhanced cooling",
+      "4-Zone RGB Lighting Keyboard with highlighted WASD",
+      "High-Resolution Audio ready",
+      "MSI App Player for seamless gaming",
+    ],
+    rating: "4.1",
+    price: 1550,
   },
   {
     id: 9,
-    img: "https://asset.msi.com/resize/image/global/product/product_8_20180207115102_5a7a77a607be4.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+    img: "https://asset.msi.com/resize/image/global/product/product_17115241149e715c38fa365614603a74c4780a32ba.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     smallImg: [
-      "https://static0.pocketlintimages.com/wordpress/wp-content/uploads/144117-laptops-news-msi-unveils-new-line-of-gaming-laptops-including-the-world%E2%80%99s-first-intel-core-i9-powered-laptop-image1-vlu8d01wb5.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdXNNUKMYMasP6nomQl6d9n7hejCTTnbwPw&s",
-      "https://static0.pocketlintimages.com/wordpress/wp-content/uploads/144117-laptops-news-msi-unveils-new-line-of-gaming-laptops-including-the-world%E2%80%99s-first-intel-core-i9-powered-laptop-image1-vlu8d01wb5.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdXNNUKMYMasP6nomQl6d9n7hejCTTnbwPw&s",
+      "https://asset.msi.com/resize/image/global/product/product_1703836693ff8b55b4424fb493710de474680ad50e.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_1711524114d44074b603aa10905955ed430a69d0a6.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_1703836698892f33103efe5996c15d35670d80bf5b.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+      "https://asset.msi.com/resize/image/global/product/product_1703836696ccca03a45d721797e7e763c7fe3da03b.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     ],
-    title: "MSI",
-    desc: "High refresh rate, RGB keyboard, and advanced cooling — built for performance.",
+    title: "MSI Thin 15 B13V",
+    desc: "Deftly I Play. An iconic thin and lightweight chassis with powerful gaming performance.",
     stars: [
-      "http://www.w3.org/2000/svg",
-      "http://www.w3.org/2000/svg",
-      "http://www.w3.org/2000/svg",
-      "http://www.w3.org/2000/svg",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
+      "[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)",
     ],
     list: [
       "Up to Intel® Core™ i7-13620H processor",
       "Windows 11 Home / Windows 11 Pro MSI recommends Windows 11 Pro for business.",
-      "Up to GeForce RTX™ 4060 Laptop GPU 8GB GDDR6 Powered by NVIDIA DLSS 3, ultra-efficient Ada Lovelace arch, and Max-Q Technologies.",
-      "17.3 Full HD (1920x1080),144 Hz Refresh Rate, IPS-Level panel",
-      "Discrete Graphics mode(MUX design) squeezes the performance to the extreme level.",
-      "Exclusive Cooler Boost 5 Technology",
+      "Up to NVIDIA® GeForce RTX™ 4050 Laptop GPU 6GB GDDR6 (slightly lower GPU option)",
+      "15.6 Full HD (1920x1080), 144 Hz Refresh Rate, IPS-Level panel",
+      "Thin bezel design, 21.7mm thin, 1.86kg light",
+      "Translucent WASD keys for visual appeal",
+      "Matrix Display supports up to 2 extra displays",
       "MSI Center with exclusive gaming mode",
-      "MSI App Player for seamless gaming experience between mobile and PC",
-      "High-Resolution Audio ready",
+      "Wi-Fi 6E for enhanced streaming experience",
     ],
-    rating: "4.4",
-    price: 1400,
+    rating: "4.0",
+    price: 950,
   },
 ];
 
 const Gaming = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const { theme } = useContext(ThemeContext);
+  //create pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 4;
+
+  const totalPages = Math.ceil(cards.length / productsPerPage);
+  const indexOfLast = currentPage * productsPerPage;
+  const indexOfFirst = indexOfLast - productsPerPage;
+  const currentProducts = cards.slice(indexOfFirst, indexOfLast);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
   return (
     <div
       className={` w-full py-10 mt-[90px] m-auto${
@@ -297,11 +310,11 @@ const Gaming = () => {
       }`}
     >
       <Carousel />
+      <h1 className="font-bold text-[3rem] text-center m-3 font-serif">Our Product</h1>
       <div className=" mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5">
-        {cards.map((card, index) => (
+        {currentProducts.map((card) => (
           <div
-            key={index}
-            className={`flex flex-col justify-between rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ${
+            className={`flex flex-col justify-between rounded-2xl overflow-hidden shadow-md hover:shadow-xl  transition-all duration-300 transform hover:-translate-y-1 ${
               theme === "dark"
                 ? "bg-gradient-to-tr from-gray-900 via-gray-950 to-black border border-gray-700"
                 : "bg-white border border-gray-200"
@@ -373,6 +386,49 @@ const Gaming = () => {
           </div>
         ))}
       </div>
+      <div className="flex justify-center mt-10 gap-3">
+        <button
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          className={`px-4 py-2 rounded-xl font-semibold transition-all duration-300 
+      ${
+        currentPage === 1
+          ? "bg-black text-white cursor-not-allowed opacity-80"
+          : "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  shadow-md hover:shadow-xl hover:scale-105"
+      }`}
+        >
+          Prev
+        </button>
+
+        {[...Array(totalPages)].map((_, i) => (
+          <button
+            key={i}
+            onClick={() => handlePageChange(i + 1)}
+            className={`px-4 py-2 rounded-xl font-semibold transition-all duration-300 
+        ${
+          currentPage === i + 1
+            ? "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  shadow-lg scale-105"
+            : "bg-gray-800  text-white hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500  hover:shadow-lg"
+        }`}
+          >
+            {i + 1}
+          </button>
+        ))}
+
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className={`px-4 py-2 rounded-xl font-semibold transition-all duration-300 
+      ${
+        currentPage === totalPages
+          ? "bg-black text-white cursor-not-allowed opacity-80"
+          : "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  shadow-md hover:shadow-xl hover:scale-105"
+      }`}
+        >
+          Next
+        </button>
+      </div>
+
       {selectedProduct && (
         <CardModal
           product={selectedProduct}

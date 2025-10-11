@@ -2,6 +2,7 @@ import { useContext, useEffect, useRef } from "react";
 import ThemeContext from "../context/themeProvder";
 import MSILaptopFeatures from "../mini-page/MSILaptopFeatures";
 import "../StyleCss/animation.css";
+import { Link } from "react-router-dom";
 const images = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRZQ03VBPkcuVFGvUORHts5b-nJFR-9Gj5FQ&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpOF89Td-0yRsmWjNz5pzhpjxjcziJ8-YOFw&s",
@@ -68,7 +69,7 @@ const Home = () => {
         }
       `}
           >
-            Shop Now
+           <Link to="/gaming"> Shop Now</Link>
           </button>
         </div>
       </div>
@@ -92,13 +93,6 @@ const Home = () => {
                   their sleek designs and powerful features.
                 </p>
               </div>
-
-              <a
-                href="#"
-                className="inline-block rounded-lg border bg-white dark:bg-gray-700 dark:border-none px-4 py-2 text-center text-sm font-semibold text-gray-500 dark:text-gray-200 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base"
-              >
-                More Laptops
-              </a>
             </div>
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
@@ -181,36 +175,6 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-4xl font-bold lg:text-3xl ml-[90px]">Popular</h2>
-          <div
-            ref={carouselRef}
-            className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full h-96 md:h-80 rounded-2xl shadow-2xl p-6 space-x-8 mt-[50px] bg-gradient-to-br from-gray-100 via-gray-50 to-gray-200 dark:from-gray-900 dark:via-gray-950 dark:to-black"
-          >
-            {images.map((src, index) => (
-              <div
-                key={index}
-                className={`snap-center flex-shrink-0 w-full max-w-md h-full rounded-xl border-2 scroll-wrapper
-        shadow-[0_4px_20px_rgba(0,0,0,0.15)]
-        overflow-hidden cursor-pointer transform transition-transform duration-300
-        hover:scale-105 hover:shadow-[0_8px_30px_rgba(99,102,241,0.6)]
-        ${theme === "dark" ? "border-indigo-600 text-white" : "border-none"}
-      `}
-                style={{
-                  boxShadow:
-                    theme === "dark"
-                      ? "0 4px 20px rgba(99, 102, 241, 0.5), inset 0 0 10px rgba(99, 102, 241, 0.3)"
-                      : "0 4px 20px rgba(99, 102, 241, 0.5), inset 0 0 10px rgba(99, 102, 241, 0.3)",
-                }}
-              >
-                <img
-                  src={src}
-                  alt={`Slide ${index + 1}`}
-                  className="w-full h-full object-cover rounded-xl"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
         </div>
         <MSILaptopFeatures />
       </div>

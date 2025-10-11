@@ -8,8 +8,8 @@ import Footer from "./component/Footer";
 import ThemeContext from "./context/themeProvder";
 import Service from "./pages/Service";
 import Gaming from "./ProductPages/Gaming";
-import Business from "./ProductPages/Business";
-import Accessories from "./ProductPages/Accessories";
+// import Business from "./ProductPages/Business";
+// import Accessories from "./ProductPages/Accessories";
 import ProductContext from "./context/ProductContext";
 
 const App = () => {
@@ -26,8 +26,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/gaming" element={<Gaming/>}/>
-          <Route path="/business" element={<Business/>}/>
-          <Route path="/accessories" element={<Accessories/>}/>
+          {/* <Route path="/business" element={<Business/>}/>
+          <Route path="/accessories" element={<Accessories/>}/> */}
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/service" element={<Service />} />
         </Routes>

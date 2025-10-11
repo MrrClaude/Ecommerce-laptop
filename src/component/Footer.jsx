@@ -78,7 +78,7 @@ const Footer = () => {
                   Gaming Laptops
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/business" className="hover:underline">
                   Business Laptops
                 </Link>
@@ -87,7 +87,7 @@ const Footer = () => {
                 <Link to="/accessories" className="hover:underline">
                   Accessories
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div>

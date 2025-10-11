@@ -6,6 +6,9 @@ import ThemeContext from "../context/themeProvder";
 import imgLogo from "/Artboard1.png";
 import Login from "./Login";
 import { FaCartShopping } from "react-icons/fa6";
+import { FaEnvelopeOpenText, FaHome, FaLaptopCode, FaUser } from "react-icons/fa";
+import { RiInformationLine } from "react-icons/ri";
+import { HiMiniComputerDesktop } from "react-icons/hi2";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,13 +67,6 @@ const Navbar = () => {
           </Link>
 
           <div className="flex items-center space-x-3 md:order-2">
-            <button
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="md:hidden p-2 rounded-lg"
-            >
-              🔍
-            </button>
-
             <button className="p-2 rounded-full transition" onClick={toggle}>
               {theme === "light" ? <IoSunny /> : <IoMoon />}
             </button>
@@ -130,23 +126,31 @@ const Navbar = () => {
             } w-full md:flex md:w-auto md:order-1`}
           >
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent md:dark:bg-transparent">
-              <li>
+              <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
+                <FaHome />
                 <Link
                   to="/"
-                  className="block py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  Home
+                   Home
                 </Link>
               </li>
-              <li>
+              <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
+                 <RiInformationLine className="text-lg" />
                 <Link
                   to="/about"
-                  className="block py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  About
+                   About
                 </Link>
               </li>
-              <li className="relative">
+              <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
+                <HiMiniComputerDesktop className="text-lg" />
+                <Link
+                  to="/gaming"
+                >
+                   Products
+                </Link>
+              </li>
+              {/* <li className="relative">
                 <button
                   onMouseEnter={() =>
                     window.innerWidth >= 768 && setIsDropdownOpen(true)
@@ -196,21 +200,21 @@ const Navbar = () => {
                     </ul>
                   </div>
                 )}
-              </li>
-              <li>
+              </li> */}
+             <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
+                 <FaEnvelopeOpenText className="text-lg" />
                 <Link
                   to="/contact"
-                  className="block py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  Contact Us
+                   Contact Us
                 </Link>
               </li>
-              <li>
+             <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
+                <FaLaptopCode className="text-lg" />
                 <Link
                   to="/service"
-                  className="block py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  Service
+                   Service
                 </Link>
               </li>
             </ul>

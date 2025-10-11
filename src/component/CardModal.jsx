@@ -6,22 +6,26 @@ import ThemeContext from "../context/themeProvder";
 
 const CardModal = ({ product, onClose }) => {
   if (!product) return null;
-  const {theme} =useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext);
   const [mainImage, setMainImage] = useState(product.img);
   const [quantity, setQuantity] = useState(1);
-   const totalPrice = product.price * quantity;
+  const totalPrice = product.price * quantity;
 
   const changeImage = (src) => setMainImage(src);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm ">
       <motion.div
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.95, opacity: 0 }}
         transition={{ duration: 0.25 }}
         className={`relative w-[90%] h-[90%] overflow-y-auto rounded-3xl shadow-2xl
-          ${theme === "dark" ? "bg-gradient-to-tr from-gray-900 via-gray-950 to-black text-white" : "bg-white text-gray-800"}
+          ${
+            theme === "dark"
+              ? "bg-gradient-to-tr from-gray-900 via-gray-950 to-black text-white"
+              : "bg-white text-gray-800"
+          }
         `}
       >
         {/* Close Button */}
@@ -34,13 +38,15 @@ const CardModal = ({ product, onClose }) => {
 
         <div className="flex flex-col md:flex-row h-full">
           {/* Left: Images */}
-          <div className="md:w-1/2 p-6 flex flex-col items-center bg-gray-50 dark:bg-gray-800 rounded-l-3xl">
+          <div className={`md:w-1/2 p-6 flex flex-col items-center  rounded-l-3xl ${theme === "dark"
+          ? "border-gray-700 bg-gradient-to-tr from-gray-900 via-gray-950 to-black text-white"
+          : "border-gray-200 bg-white text-gray-800 shadow-sm"}`}>
             <img
               src={mainImage}
               alt={product.title}
               className="w-full h-[300px] md:h-[500px]  rounded-xl shadow-lg mb-4 transition-transform duration-300 hover:scale-105"
             />
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-3 w-full">
+            <div className="grid grid-cols-3 md:grid-cols-4 gap-3 mt-8 w-full">
               {product.smallImg.map((thumb, idx) => (
                 <img
                   key={idx}
@@ -56,7 +62,13 @@ const CardModal = ({ product, onClose }) => {
           {/* Right: Details */}
           <div className="md:w-1/2 p-6 flex flex-col justify-between">
             <div>
-              <h1 className={`text-[2rem] font-bold ${theme ==="dark"?"text-indigo-700" : "text-black" }`}>{product.title}</h1>
+              <h1
+                className={`text-[2rem] font-bold ${
+                  theme === "dark" ? "text-indigo-700" : "text-black"
+                }`}
+              >
+                {product.title}
+              </h1>
               <h2 className=" font-bold mb-3">{product.desc}</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 High performance product with excellent user experience.
@@ -98,13 +110,11 @@ const CardModal = ({ product, onClose }) => {
                   className="w-16 text-center rounded-md border-gray-300 shadow-sm text-black focus:border-indigo-400 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
               </div>
-              {
-                product.list.map((li,i)=>(
-                  <ul key={i}>
-                    <li className="list-disc opacity-50">{li}</li>
-                  </ul>
-                ))
-              }
+              {product.list.map((li, i) => (
+                <ul key={i}>
+                  <li className="list-disc opacity-50">{li}</li>
+                </ul>
+              ))}
             </div>
 
             {/* Buttons */}
