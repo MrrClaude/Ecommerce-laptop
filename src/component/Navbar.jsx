@@ -6,16 +6,22 @@ import ThemeContext from "../context/themeProvder";
 import imgLogo from "/Artboard1.png";
 import Login from "./Login";
 import { FaCartShopping } from "react-icons/fa6";
-import { FaEnvelopeOpenText, FaHome, FaLaptopCode, FaUser } from "react-icons/fa";
+import {
+  FaEnvelopeOpenText,
+  FaHome,
+  FaLaptopCode,
+  FaUser,
+} from "react-icons/fa";
 import { RiInformationLine } from "react-icons/ri";
 import { HiMiniComputerDesktop } from "react-icons/hi2";
+import CartContext from "../context/CartContext";
 
-const Navbar = () => {
+const Navbar = ({onOpenCart}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-
+  const { cartItems } = useContext(CartContext);
   const { theme, toggle } = useContext(ThemeContext);
   const [showNavbar, setShowNavbar] = useState(true);
 
@@ -88,6 +94,7 @@ const Navbar = () => {
             </button>
 
             <button
+              onClick={onOpenCart}
               className={`relative flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200              
                   ${
                     theme === "dark"
@@ -100,6 +107,11 @@ const Navbar = () => {
               }`}
             >
               <FaCartShopping className="mr-2 text-lg" />
+              {cartItems.length > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full px-2">
+                  {cartItems.length}
+                </span>
+              )}
             </button>
 
             <button
@@ -128,27 +140,15 @@ const Navbar = () => {
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent md:dark:bg-transparent">
               <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
                 <FaHome />
-                <Link
-                  to="/"
-                >
-                   Home
-                </Link>
+                <Link to="/">Home</Link>
               </li>
               <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
-                 <RiInformationLine className="text-lg" />
-                <Link
-                  to="/about"
-                >
-                   About
-                </Link>
+                <RiInformationLine className="text-lg" />
+                <Link to="/about">About</Link>
               </li>
               <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
                 <HiMiniComputerDesktop className="text-lg" />
-                <Link
-                  to="/gaming"
-                >
-                   Products
-                </Link>
+                <Link to="/gaming">Products</Link>
               </li>
               {/* <li className="relative">
                 <button
@@ -201,21 +201,13 @@ const Navbar = () => {
                   </div>
                 )}
               </li> */}
-             <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
-                 <FaEnvelopeOpenText className="text-lg" />
-                <Link
-                  to="/contact"
-                >
-                   Contact Us
-                </Link>
+              <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
+                <FaEnvelopeOpenText className="text-lg" />
+                <Link to="/contact">Contact Us</Link>
               </li>
-             <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
+              <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
                 <FaLaptopCode className="text-lg" />
-                <Link
-                  to="/service"
-                >
-                   Service
-                </Link>
+                <Link to="/service">Service</Link>
               </li>
             </ul>
           </div>

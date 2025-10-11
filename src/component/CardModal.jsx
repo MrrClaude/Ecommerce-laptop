@@ -1,34 +1,52 @@
 import React, { useContext, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes, FaShoppingCart } from "react-icons/fa";
 import { FiHeart } from "react-icons/fi";
 import ThemeContext from "../context/themeProvder";
+import CartContext from "../context/CartContext";
 
 const CardModal = ({ product, onClose }) => {
   if (!product) return null;
   const { theme } = useContext(ThemeContext);
+  const { addToCart } = useContext(CartContext);
+
   const [mainImage, setMainImage] = useState(product.img);
   const [quantity, setQuantity] = useState(1);
+  const [showToast, setShowToast] = useState(false);
+
   const totalPrice = product.price * quantity;
 
-  const changeImage = (src) => setMainImage(src);
+  const handleAddToCart = () => {
+    addToCart(product, quantity);
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 2000);
+  };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm ">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+      <AnimatePresence>
+        {showToast && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed top-6 right-6 bg-green-500 text-white px-4 py-2 rounded-xl shadow-lg z-[9999]"
+          >
+            ✅ Successs
+          </motion.div>
+        )}
+      </AnimatePresence>
       <motion.div
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.95, opacity: 0 }}
         transition={{ duration: 0.25 }}
-        className={`relative w-[90%] h-[90%] overflow-y-auto rounded-3xl shadow-2xl
-          ${
-            theme === "dark"
-              ? "bg-gradient-to-tr from-gray-900 via-gray-950 to-black text-white"
-              : "bg-white text-gray-800"
-          }
-        `}
+        className={`relative w-[90%] h-[90%] overflow-y-auto rounded-3xl shadow-2xl ${
+          theme === "dark"
+            ? "bg-gradient-to-tr from-gray-900 via-gray-950 to-black text-white"
+            : "bg-white text-gray-800"
+        }`}
       >
-        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-600 dark:text-gray-300 hover:text-red-500 text-2xl transition"
@@ -37,14 +55,17 @@ const CardModal = ({ product, onClose }) => {
         </button>
 
         <div className="flex flex-col md:flex-row h-full">
-          {/* Left: Images */}
-          <div className={`md:w-1/2 p-6 flex flex-col items-center  rounded-l-3xl ${theme === "dark"
-          ? "border-gray-700 bg-gradient-to-tr from-gray-900 via-gray-950 to-black text-white"
-          : "border-gray-200 bg-white text-gray-800 shadow-sm"}`}>
+          <div
+            className={`md:w-1/2 p-6 flex flex-col items-center rounded-l-3xl ${
+              theme === "dark"
+                ? "border-gray-700 bg-gradient-to-tr from-gray-900 via-gray-950 to-black"
+                : "border-gray-200 bg-white shadow-sm"
+            }`}
+          >
             <img
               src={mainImage}
               alt={product.title}
-              className="w-full h-[300px] md:h-[500px]  rounded-xl shadow-lg mb-4 transition-transform duration-300 hover:scale-105"
+              className="w-full h-[300px] md:h-[500px] rounded-xl shadow-lg mb-4 transition-transform duration-300 hover:scale-105"
             />
             <div className="grid grid-cols-3 md:grid-cols-4 gap-3 mt-8 w-full">
               {product.smallImg.map((thumb, idx) => (
@@ -53,28 +74,24 @@ const CardModal = ({ product, onClose }) => {
                   src={thumb}
                   alt={`Thumbnail ${idx + 1}`}
                   className="w-full h-20 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-indigo-500 transition"
-                  onClick={() => changeImage(thumb)}
+                  onClick={() => setMainImage(thumb)}
                 />
               ))}
             </div>
           </div>
-
-          {/* Right: Details */}
           <div className="md:w-1/2 p-6 flex flex-col justify-between">
             <div>
               <h1
                 className={`text-[2rem] font-bold ${
-                  theme === "dark" ? "text-indigo-700" : "text-black"
+                  theme === "dark" ? "text-indigo-400" : "text-indigo-700"
                 }`}
               >
                 {product.title}
               </h1>
-              <h2 className=" font-bold mb-3">{product.desc}</h2>
+              <h2 className="font-semibold mb-3">{product.desc}</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                High performance product with excellent user experience.
+                High-performance product with excellent user experience.
               </p>
-
-              {/* Rating */}
               <div className="flex items-center gap-2 mb-4">
                 {product.stars.map((_, idx) => (
                   <svg
@@ -92,38 +109,73 @@ const CardModal = ({ product, onClose }) => {
                 </span>
               </div>
 
-              {/* Price */}
               <span className="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-4 block">
                 ${totalPrice.toFixed(2)}
               </span>
 
-              {/* Quantity */}
-              <div className="mb-5">
-                <label className="block text-sm font-medium  mb-1">
+              <div className="mb-6 flex items-center gap-4">
+                <label className="text-base font-semibold tracking-wide text-gray-800 dark:text-gray-200">
                   Quantity:
                 </label>
-                <input
-                  type="number"
-                  min="1"
-                  value={quantity}
-                  onChange={(e) => setQuantity(parseInt(e.target.value))}
-                  className="w-16 text-center rounded-md border-gray-300 shadow-sm text-black focus:border-indigo-400 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                />
+                <div
+                  className={`flex items-center border-2 rounded-full shadow-sm backdrop-blur-md overflow-hidden transition-all duration-300 ${
+                    theme === "dark"
+                      ? "border-gray-700 bg-gray-800/60 hover:bg-gray-700/80"
+                      : "border-gray-200 bg-white/80 hover:bg-gray-50/90"
+                  }`}
+                >
+                  <button
+                    onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                    className={`px-4 py-2 text-lg font-bold transition-all duration-300 ${
+                      theme === "dark"
+                        ? "text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600"
+                        : "text-gray-600 hover:text-white hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-600"
+                    }`}
+                  >
+                    −
+                  </button>
+                  <input
+                    type="number"
+                    min="1"
+                    value={quantity}
+                    onChange={(e) =>
+                      setQuantity(Math.max(1, parseInt(e.target.value) || 1))
+                    }
+                    className={`w-16 text-center font-semibold text-lg border-0 focus:outline-none bg-transparent ${
+                      theme === "dark" ? "text-white" : "text-gray-900"
+                    }`}
+                  />
+                  <button
+                    onClick={() => setQuantity((q) => q + 1)}
+                    className={`px-4 py-2 text-lg font-bold transition-all duration-300 ${
+                      theme === "dark"
+                        ? "text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-indigo-600 hover:to-purple-600"
+                        : "text-gray-600 hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-green-500"
+                    }`}
+                  >
+                    +
+                  </button>
+                </div>
               </div>
-              {product.list.map((li, i) => (
-                <ul key={i}>
-                  <li className="list-disc opacity-50">{li}</li>
+              {product.list?.length > 0 && (
+                <ul className="list-disc pl-5 space-y-1 text-gray-500 dark:text-gray-400">
+                  {product.list.map((li, i) => (
+                    <li key={i}>{li}</li>
+                  ))}
                 </ul>
-              ))}
+              )}
             </div>
 
-            {/* Buttons */}
-            <div className="flex gap-4 mt-4">
-              <button className="flex-1 bg-indigo-600 text-white px-6 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-indigo-700 transition shadow-md">
+            <div className="flex gap-4 mt-6">
+              <button
+                onClick={handleAddToCart}
+                className="flex-1 bg-indigo-600 text-white px-6 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-indigo-700 transition shadow-md"
+              >
                 <FaShoppingCart />
                 Add to Cart
               </button>
-              <button className="flex-1 bg-gray-200 text-gray-800 px-6 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-300 transition">
+
+              <button className="flex-1 bg-gray-200 text-gray-800 px-6 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-300 dark:bg-gray-700 dark:text-white transition">
                 <FiHeart />
                 Wishlist
               </button>

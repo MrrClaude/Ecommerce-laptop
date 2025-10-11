@@ -205,7 +205,7 @@ const Service = () => {
                 transition={{ type: "spring", stiffness: 120 }}
                 className={`p-8 rounded-2xl flex flex-col items-center justify-center text-center gap-5 ${cardBg} hover:cursor-pointer transition-transform duration-300`}
               >
-                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-purple-400 to-pink-300 text-black text-3xl mb-6">
+                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-purple-400 to-pink-300 text-black text-3xl mb-6 transform-hover">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>

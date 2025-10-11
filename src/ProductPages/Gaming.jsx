@@ -3,6 +3,8 @@ import Carousel from "../component/Carousel";
 import ThemeContext from "../context/themeProvder";
 import CardModal from "../component/CardModal";
 import products from "../data/products.json";
+import CartContext from "../context/CartContext";
+import { FaCartShopping } from "react-icons/fa6";
 
 const cards = [
   {
@@ -287,8 +289,6 @@ const cards = [
 ];
 
 const Gaming = () => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const { theme } = useContext(ThemeContext);
   //create pagination
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 4;
@@ -297,6 +297,10 @@ const Gaming = () => {
   const indexOfLast = currentPage * productsPerPage;
   const indexOfFirst = indexOfLast - productsPerPage;
   const currentProducts = cards.slice(indexOfFirst, indexOfLast);
+
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const { theme } = useContext(ThemeContext);
+  const { addToCart } = useContext(CartContext);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -310,7 +314,9 @@ const Gaming = () => {
       }`}
     >
       <Carousel />
-      <h1 className="font-bold text-[3rem] text-center m-3 font-serif">Our Product</h1>
+      <h1 className="font-bold text-[3rem] text-center m-3 font-serif">
+        Our Product
+      </h1>
       <div className=" mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5">
         {currentProducts.map((card) => (
           <div
@@ -373,13 +379,15 @@ const Gaming = () => {
                   View more
                 </button>
                 <button
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  onClick={() => addToCart(card)}
+                  className={`px-4 py-2 flex items-center gap-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     theme === "dark"
                       ? "bg-green-600 hover:bg-green-700 text-white"
                       : "bg-green-500 hover:bg-green-600 text-white"
                   }`}
                 >
-                  Add to card
+                  <FaCartShopping />
+                  Add to Cart
                 </button>
               </div>
             </div>
