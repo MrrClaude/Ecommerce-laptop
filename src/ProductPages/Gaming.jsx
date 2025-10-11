@@ -15,7 +15,7 @@ const cards = [
       "https://asset.msi.com/resize/image/global/product/product_16681474016cdd95a375490fce08243335a290aa93.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     ],
     title: "MSI",
-    desc: "The 13th Gen. Intel® Core™ i7 processor is here. With improved hybrid core architecture, 6 Performance-cores and 4 Efficient-cores, for better multitasking works and running demanding games.",
+    desc: "The 13th Gen. Intel® Core™ i7 processor is here. With improved hybrid core architecture.",
     stars: [
       "http://www.w3.org/2000/svg",
       "http://www.w3.org/2000/svg",
@@ -46,7 +46,7 @@ const cards = [
       "https://asset.msi.com/resize/image/global/product/product_17369342203e10a275e3b788fc916ad948efef23bd.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     ],
     title: "Titan 18 HX Dragon Edition Norse Myth",
-    desc: "Stay at the forefront of data transfer and connectivity solutions. Thunderbolt™ 5 delivers up to 120 Gbps of transmit bandwidth with Thunderbolt™ Bandwidth Boost, enabling connections to more monitors at higher resolutions and refresh rates than ever before.",
+    desc: "Stay at the forefront of data transfer and connectivity solutions. Thunderbolt™ 5 delivers up to 120 Gbps of transmit bandwidth with Thunderbolt™ Bandwidth Boost.",
     stars: [
       "http://www.w3.org/2000/svg",
       "http://www.w3.org/2000/svg",
@@ -139,7 +139,7 @@ const cards = [
       "https://asset.msi.com/resize/image/global/product/product_1721373493a21beace6ab2267b48e41effee579cc2.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     ],
     title: "Stealth 18 AI Studio A1V",
-    desc: "The latest Intel® Core™ Ultra 9 processor 185H represents a groundbreaking advancement in processing power, featuring Intel's first integrated NPU for power-efficient AI acceleration and local inference on the laptop . With cutting-edge architecture and a high core count, it offers unprecedented performance for a wide range of applications, from gaming to scientific computing.",
+    desc: "The latest Intel® Core™ Ultra 9 processor 185H represents a groundbreaking advancement in processing power, ",
     stars: [
       "http://www.w3.org/2000/svg",
       "http://www.w3.org/2000/svg",
