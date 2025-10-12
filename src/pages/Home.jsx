@@ -29,7 +29,7 @@ const Home = () => {
 
       const scrollToX = scrollIndex.current * carousel.offsetWidth;
       carousel.scrollTo({ left: scrollToX, behavior: "smooth" });
-    }, 3000); // scroll every 3 seconds
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -69,7 +69,7 @@ const Home = () => {
         }
       `}
           >
-           <Link to="/gaming"> Shop Now</Link>
+           <Link to="/gaming">Shop Now</Link>
           </button>
         </div>
       </div>
@@ -96,7 +96,6 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
-              {/* Laptop 1 */}
               <a
                 href="#"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
@@ -114,8 +113,6 @@ const Home = () => {
                   Content Creator & Business Laptops:
                 </span>
               </a>
-
-              {/* Laptop 2 */}
               <a
                 href="#"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
@@ -133,8 +130,6 @@ const Home = () => {
                   Gaming Laptop
                 </span>
               </a>
-
-              {/* Laptop 3 */}
               <a
                 href="#"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
@@ -152,8 +147,6 @@ const Home = () => {
                   Accessories
                 </span>
               </a>
-
-              {/* Laptop 4 */}
               <a
                 href="#"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"

@@ -150,8 +150,7 @@ const ContactUs = () => {
             <p className="mt-2 text-gray-600 dark:text-gray-400">
               MSI typically offers a 1-year global warranty on laptops, which
               covers hardware defects. Extended warranty and on-site service
-              options may be available depending on your region. Visit the
-              official MSI support site for details and product registration.
+              options may be available depending on your region. 
             </p>
           </div>
         </div>
