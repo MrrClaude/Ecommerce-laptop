@@ -10,6 +10,7 @@ import Service from "./pages/Service";
 import Gaming from "./ProductPages/Gaming";
 import AddToCartModal from "./component/AddToCartModal";
 import PaymentPage from "./component/PaymentPage";
+import Page404 from "./pages/page404";
 // import Business from "./ProductPages/Business";
 // import Accessories from "./ProductPages/Accessories";
 
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/service" element={<Service />} />
            <Route path="/payment" element={<PaymentPage />} />
+           <Route path="/page404" element={<Page404/>}/>
         </Routes>
       </main>
       <footer>

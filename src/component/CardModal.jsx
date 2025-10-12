@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaTimes, FaShoppingCart } from "react-icons/fa";
-import { FiHeart } from "react-icons/fi";
+import { FaTimes, FaShoppingCart ,FaHeart} from "react-icons/fa";
 import ThemeContext from "../context/themeProvder";
 import CartContext from "../context/CartContext";
 
@@ -9,6 +8,11 @@ const CardModal = ({ product, onClose }) => {
   if (!product) return null;
   const { theme } = useContext(ThemeContext);
   const { addToCart } = useContext(CartContext);
+  const [isWishlisted, setIsWishlisted] = useState(false);
+
+  const toggleWishlist = () => {
+    setIsWishlisted(!isWishlisted);
+  };
 
   const [mainImage, setMainImage] = useState(product.img);
   const [quantity, setQuantity] = useState(1);
@@ -175,8 +179,15 @@ const CardModal = ({ product, onClose }) => {
                 Add to Cart
               </button>
 
-              <button className="flex-1 bg-gray-200 text-gray-800 px-6 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-300 dark:bg-gray-700 dark:text-white transition">
-                <FiHeart />
+              <button
+                onClick={toggleWishlist}
+                className="flex-1 bg-gray-200 text-gray-800 px-6 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-300 dark:bg-gray-700 dark:text-white transition"
+              >
+                <FaHeart
+                  className={`text-xl transition-colors duration-300 ${
+                    isWishlisted ? "text-red-500 " : ""
+                  }`}
+                />
                 Wishlist
               </button>
             </div>

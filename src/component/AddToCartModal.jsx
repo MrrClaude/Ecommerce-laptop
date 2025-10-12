@@ -36,8 +36,8 @@ const AddToCartModal = ({ isOpen, onClose }) => {
              
           >
             <div className="flex justify-between items-center mb-8 border-b pb-4 border-gray-500/30">
-              <h2 className="text-3xl font-extrabold tracking-tight  bg-clip-text text-transparent">
-                Your Cart
+              <h2 className="text-3xl font-extrabold tracking-tight ">
+                Submit order
               </h2>
               <button
                 onClick={onClose}

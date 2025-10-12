@@ -17,7 +17,7 @@ const cards = [
       "https://asset.msi.com/resize/image/global/product/product_16681474016cdd95a375490fce08243335a290aa93.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     ],
     title: "MSI",
-    desc: "The 13th Gen. Intel® Core™ i7 processor is here. With improved hybrid core architecture.",
+    desc: "Experience the power of the 13th Gen Intel® Core™ i7 processor with improved hybrid core architecture for enhanced performance and efficiency.",
     stars: [
       "http://www.w3.org/2000/svg",
       "http://www.w3.org/2000/svg",
@@ -48,7 +48,7 @@ const cards = [
       "https://asset.msi.com/resize/image/global/product/product_17369342203e10a275e3b788fc916ad948efef23bd.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     ],
     title: "Titan 18 HX Dragon Edition Norse Myth",
-    desc: "Stay at the forefront of data transfer and connectivity solutions. Thunderbolt™ 5 delivers up to 120 Gbps of transmit bandwidth with Thunderbolt™ Bandwidth Boost.",
+    desc: "Lead the way in high-speed data transfer and connectivity with Thunderbolt™ 5, offering up to 120 Gbps transmit bandwidth and enhanced performance for professional and gaming tasks.",
     stars: [
       "http://www.w3.org/2000/svg",
       "http://www.w3.org/2000/svg",
@@ -79,7 +79,7 @@ const cards = [
       "https://asset.msi.com/resize/image/global/product/product_173745099195e06b8f987012dc5153d1d051194921.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     ],
     title: "Raider A18 HX A9W",
-    desc: "Indulge in unmatched realism with the Mini LED 4K display's ultra-high resolution whether you are indoors, outdoors, or under direct sunlight.",
+    desc: "Enjoy stunning visuals and unmatched realism on the Mini LED 4K display, delivering ultra-high resolution and vibrant colors in any lighting condition.",
     stars: [
       "http://www.w3.org/2000/svg",
       "http://www.w3.org/2000/svg",
@@ -109,7 +109,7 @@ const cards = [
       "https://asset.msi.com/resize/image/global/product/product_17495443670cd5fa9c9035765c2b56e2e7dcd86768.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     ],
     title: "Stealth A16 AI+ Mercedes-AMG Motorsport A3XW",
-    desc: "Powered by NVIDIA Blackwell, GeForce RTX™ 50 Series Laptop GPUs bring game-changing capabilities to gamers and creators. Equipped with a massive level of AI horsepower, the RTX 50 Series enables new experiences and next-level graphics fidelity.",
+    desc: "Harness the power of NVIDIA Blackwell GeForce RTX™ 50 Series Laptop GPUs for cutting-edge AI performance, immersive graphics, and next-level gaming and content creation experiences.",
     stars: [
       "http://www.w3.org/2000/svg",
       "http://www.w3.org/2000/svg",
@@ -366,29 +366,30 @@ const Gaming = () => {
                   {card.rating}
                 </span>
               </div>
-              <div className="mt-auto flex items-center justify-between gap-2">
+              <div className="mt-auto flex items-cente justify-between gap-2">
                 <span className="text-2xl font-bold">${card.price}</span>
-                <button
-                  onClick={() => setSelectedProduct(card)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    theme === "dark"
-                      ? "bg-indigo-600 hover:bg-indigo-700 text-white"
-                      : "bg-blue-600 hover:bg-blue-700 text-white"
-                  }`}
-                >
-                  View more
-                </button>
-                <button
-                  onClick={() => addToCart(card)}
-                  className={`px-4 py-2 flex items-center gap-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    theme === "dark"
-                      ? "bg-green-600 hover:bg-green-700 text-white"
-                      : "bg-green-500 hover:bg-green-600 text-white"
-                  }`}
-                >
-                  <FaCartShopping />
-                  Add to Cart
-                </button>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setSelectedProduct(card)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      theme === "dark"
+                        ? "bg-indigo-600 hover:bg-indigo-700 text-white"
+                        : "bg-blue-600 hover:bg-blue-700 text-white"
+                    }`}
+                  >
+                    View more
+                  </button>
+                  <button
+                    onClick={() => addToCart(card)}
+                    className={`px-4 py-4 flex items-center gap-2 rounded-[50%] text-sm font-medium transition-all duration-200 ${
+                      theme === "dark"
+                        ? "bg-green-600 hover:bg-green-700 text-white"
+                        : "bg-green-500 hover:bg-green-600 text-white"
+                    }`}
+                  >
+                    <FaCartShopping />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -405,7 +406,7 @@ const Gaming = () => {
           : "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  shadow-md hover:shadow-xl hover:scale-105"
       }`}
         >
-          Prev
+          ← Prev
         </button>
 
         {[...Array(totalPages)].map((_, i) => (
@@ -433,7 +434,7 @@ const Gaming = () => {
           : "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  shadow-md hover:shadow-xl hover:scale-105"
       }`}
         >
-          Next
+          Next →
         </button>
       </div>
 

@@ -95,7 +95,7 @@ const Navbar = ({onOpenCart}) => {
 
             <button
               onClick={onOpenCart}
-              className={`relative flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200              
+              className={`relative flex items-center px-2 py-2 text-sm font-medium rounded-[50%] transition-all duration-200              
                   ${
                     theme === "dark"
                       ? "bg-green-600 hover:bg-green-700 text-white"
@@ -106,7 +106,7 @@ const Navbar = ({onOpenCart}) => {
                   : "focus:ring-green-400"
               }`}
             >
-              <FaCartShopping className="mr-2 text-lg" />
+              <FaCartShopping className=" text-lg" />
               {cartItems.length > 0 && (
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full px-2">
                   {cartItems.length}

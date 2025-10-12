@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import imgLogo from "/Artboard1.png";
 import ThemeContext from "../context/themeProvder";
-import { FaFacebookF, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   const { theme } = useContext(ThemeContext);
@@ -100,27 +100,27 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-gray-500 dark:text-gray-400">
               <li>
-                <Link to="/shipping" className="hover:underline">
+                <Link to="/page404" className="hover:underline">
                   Shipping Info
                 </Link>
               </li>
               <li>
-                <Link to="/returns" className="hover:underline">
+                <Link to="/page404" className="hover:underline">
                   Returns
                 </Link>
               </li>
               <li>
-                <Link to="/warranty" className="hover:underline">
+                <Link to="/page404" className="hover:underline">
                   Warranty
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="hover:underline">
+                <Link to="/page404" className="hover:underline">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="hover:underline">
+                <Link to="/page404" className="hover:underline">
                   Terms & Conditions
                 </Link>
               </li>
@@ -139,7 +139,7 @@ const Footer = () => {
 
           <div className="flex space-x-5 mt-4 sm:mt-0 text-xl">
             <a
-              href="#"
+              href="https://www.facebook.com/mrr.claude" target="blank"
               className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400"
             >
               <FaFacebookF/>
@@ -148,19 +148,13 @@ const Footer = () => {
               href="#"
               className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400"
             >
-              <FaTwitter />
+              <FaInstagram />
             </a>
             <a
               href="#"
               className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400"
             >
-              <FaLinkedinIn />
-            </a>
-            <a
-              href="#"
-              className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400"
-            >
-              <FaYoutube />
+              <FaTiktok />
             </a>
           </div>
         </div>
