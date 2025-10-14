@@ -202,8 +202,6 @@ const AboutUs = () => {
             ))}
           </div>
         </motion.section>
-
-        {/* Achievements */}
         <motion.section
           className={`rounded-xl p-12 mb-20 imageReveal ${
             theme === "dark" ? "bg-gray-800" : "bg-gray-200"
