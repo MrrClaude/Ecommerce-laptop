@@ -1,6 +1,6 @@
 import React from "react";
 
-const Page404 = () => {
+const Page500 = () => {
   return (
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-gradient-to-tr from-gray-900 via-gray-950 to-black text-white border-t border-gray-700 mt-[90px]">
       {/* Background GIF */}
@@ -39,4 +39,4 @@ const Page404 = () => {
   );
 };
 
-export default Page404;
+export default Page500;

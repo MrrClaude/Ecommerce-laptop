@@ -100,27 +100,27 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-gray-500 dark:text-gray-400">
               <li>
-                <Link to="/page404" className="hover:underline">
+                <Link to="/page500" className="hover:underline">
                   Shipping Info
                 </Link>
               </li>
               <li>
-                <Link to="/page404" className="hover:underline">
+                <Link to="/page500" className="hover:underline">
                   Returns
                 </Link>
               </li>
               <li>
-                <Link to="/page404" className="hover:underline">
+                <Link to="/page500" className="hover:underline">
                   Warranty
                 </Link>
               </li>
               <li>
-                <Link to="/page404" className="hover:underline">
+                <Link to="/page500" className="hover:underline">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/page404" className="hover:underline">
+                <Link to="/page500" className="hover:underline">
                   Terms & Conditions
                 </Link>
               </li>
@@ -137,7 +137,7 @@ const Footer = () => {
             . All rights reserved.
           </p>
 
-          <div className="flex space-x-5 mt-4 sm:mt-0 text-xl">
+          <div className="flex space-x-5 mt-4 sm:mt-0 text-xl ">
             <a
               href="https://www.facebook.com/mrr.claude" target="blank"
               className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400"
