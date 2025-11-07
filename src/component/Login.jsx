@@ -2,7 +2,7 @@
 import React, { useContext ,useState} from "react";
 import ThemeContext from "../context/themeProvder";
 import { motion, AnimatePresence } from "framer-motion";
-import Signup from "./SignUp";
+import Signup from "./Signup";
 
 const Login = ({ isOpen, onClose }) => {
   const { theme } = useContext(ThemeContext);
