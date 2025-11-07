@@ -1,9 +1,9 @@
-// src/components/Signup.jsx
+// src/components/SignupPage.jsx
 import React, { useContext } from "react";
 import ThemeContext from "../context/themeProvder";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Signup = ({ isOpen, onClose }) => {
+const SignupPage = ({ isOpen, onClose }) => {
   const { theme } = useContext(ThemeContext);
   const isDark = theme === "dark";
 
@@ -136,5 +136,5 @@ const Signup = ({ isOpen, onClose }) => {
   );
 };
 
-export default Signup;
+export default SignupPage;
 

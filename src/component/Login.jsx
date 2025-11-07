@@ -2,7 +2,8 @@
 import React, { useContext ,useState} from "react";
 import ThemeContext from "../context/themeProvder";
 import { motion, AnimatePresence } from "framer-motion";
-import Signup from "./Signup";
+import SignupPage from "./SignupPage";
+
 
 const Login = ({ isOpen, onClose }) => {
   const { theme } = useContext(ThemeContext);
@@ -12,7 +13,7 @@ const Login = ({ isOpen, onClose }) => {
   const [isSignupOpen ,setIsSignupOpen]=useState(false);
 
   if(isSignupOpen){
-    return<Signup isOpen={true} onClose={()=> setIsSignupOpen(false)}/>
+    return<SignupPage isOpen={true} onClose={()=> setIsSignupOpen(false)}/>
   }
 
   return (
