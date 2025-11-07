@@ -46,7 +46,7 @@ const Home = () => {
         </div>
         <div className="flex flex-col justify-center items-start h-screen px-6 md:px-20 text-left space-y-6">
           <h1
-            className={`text-4xl md:text-6xl font-extrabold ${
+            className={`text-4xl md:text7-xl font-extrabold ${
               theme === "dark" ? "text-indigo-700" : "text-white"
             }`}
           >
@@ -60,7 +60,8 @@ const Home = () => {
             Power meets elegance — explore our latest collection of laptops
             designed for performance, portability, and luxury.
           </p>
-          <button
+          <div className="flex gap-2.5">
+            <button
             className={`px-6 py-2 rounded-lg font-semibold transition duration-300
         ${
           theme === "dark"
@@ -71,6 +72,18 @@ const Home = () => {
           >
            <Link to="/gaming">Shop Now</Link>
           </button>
+          <button
+            className={`px-6 py-2 rounded-lg font-semibold transition duration-300
+        ${
+          theme === "dark"
+           ? " text-white backdrop-blur-md border border-white/40 hover:bg-blue-500/50"
+      : " text-white backdrop-blur-md border border-blue-200 hover:bg-blue-500/50"
+        }
+      `}
+          >
+           <Link to="/about">Explor more</Link>
+          </button>
+          </div>
         </div>
       </div>
       <div
@@ -87,7 +100,6 @@ const Home = () => {
                 <h2 className="text-2xl font-bold lg:text-3xl">
                   Laptop Gallery
                 </h2>
-
                 <p className="hidden max-w-screen-sm md:block">
                   Explore a collection of modern and classic laptops, showcasing
                   their sleek designs and powerful features.
@@ -113,8 +125,8 @@ const Home = () => {
                   Content Creator & Business Laptops:
                 </span>
               </a>
-              <a
-                href="#"
+              <Link
+                 to="/gaming"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
               >
                 <img
@@ -129,7 +141,7 @@ const Home = () => {
                 <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
                   Gaming Laptop
                 </span>
-              </a>
+              </Link>
               <a
                 href="#"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"

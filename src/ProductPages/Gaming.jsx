@@ -1,10 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { use, useContext, useState, useEffect } from "react";
 import Carousel from "../component/Carousel";
 import ThemeContext from "../context/themeProvder";
 import CardModal from "../component/CardModal";
 import products from "../data/products.json";
 import CartContext from "../context/CartContext";
 import { FaCartShopping } from "react-icons/fa6";
+import { title } from "framer-motion/client";
 
 const cards = [
   {
@@ -289,14 +290,33 @@ const cards = [
 ];
 
 const Gaming = () => {
-  //create pagination
-  const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 4;
+ 
 
-  const totalPages = Math.ceil(cards.length / productsPerPage);
-  const indexOfLast = currentPage * productsPerPage;
-  const indexOfFirst = indexOfLast - productsPerPage;
-  const currentProducts = cards.slice(indexOfFirst, indexOfLast);
+const [query, setQuery] = useState("");
+const [result, setResult] = useState(cards);
+const [currentPage, setCurrentPage] = useState(1);
+const productsPerPage = 4;
+
+// Handle search and reset page
+useEffect(() => {
+  if (query.trim().length === 0) {
+    setResult(cards);
+  } else {
+    const searchTerm = query.toLowerCase();
+    const filtered = cards.filter((p) =>
+      p.title.toLowerCase().includes(searchTerm)
+    );
+    setResult(filtered);
+  }
+  setCurrentPage(1);
+}, [query]);
+
+// Pagination logic
+const totalPages = Math.ceil(result.length / productsPerPage);
+const indexOfLast = currentPage * productsPerPage;
+const indexOfFirst = indexOfLast - productsPerPage;
+const currentProducts = result.slice(indexOfFirst, indexOfLast);
+
 
   const [selectedProduct, setSelectedProduct] = useState(null);
   const { theme } = useContext(ThemeContext);
@@ -314,8 +334,17 @@ const Gaming = () => {
       }`}
     >
       <Carousel />
+      <div className="text-center my-6">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search for a gaming laptop..."
+          className="px-4 py-2 border rounded-md w-1/2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+      </div>
       <h1 className="font-bold text-[3rem] text-center m-3 font-serif">
-        Our Product
+        Laptop Gamming 
       </h1>
       <div className=" mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5">
         {currentProducts.map((card) => (
@@ -341,7 +370,7 @@ const Gaming = () => {
               >
                 {card.title}
               </h1>
-              <h5 className=" font-semibold mb-3 leading-snug">{card.desc}</h5>
+              <h5 className=" font-semibold mb-3 leading-snug line-clamp-2">{card.desc}</h5>
               <div className="flex items-center mt-2.5 mb-5">
                 {card.stars.map((star, idx) => (
                   <div key={idx} className="flex items-center mb-5">
@@ -409,21 +438,19 @@ const Gaming = () => {
           ← Prev
         </button>
 
-        {[...Array(totalPages)].map((_, i) => (
-          <button
-            key={i}
-            onClick={() => handlePageChange(i + 1)}
-            className={`px-4 py-2 rounded-xl font-semibold transition-all duration-300 
-        ${
-          currentPage === i + 1
-            ? "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  shadow-lg scale-105"
-            : "bg-gray-800  text-white hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500  hover:shadow-lg"
-        }`}
-          >
-            {i + 1}
-          </button>
-        ))}
-
+{Array.from({ length: totalPages }, (_, index) => (
+    <button
+      key={index}
+      onClick={() => handlePageChange(index + 1)}
+      className={`px-4 py-2 rounded-lg ${
+        currentPage === index + 1
+          ? "bg-indigo-600 text-white"
+          : "bg-gray-200 hover:bg-gray-300"
+      }`}
+    >
+      {index + 1}
+    </button>
+  ))}
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}

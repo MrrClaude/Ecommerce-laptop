@@ -1,19 +1,11 @@
-// src/components/LoginModal.jsx
-import React, { useContext ,useState} from "react";
+// src/components/Signup.jsx
+import React, { useContext } from "react";
 import ThemeContext from "../context/themeProvder";
 import { motion, AnimatePresence } from "framer-motion";
-import Signup from "./SignUp";
 
-const Login = ({ isOpen, onClose }) => {
+const Signup = ({ isOpen, onClose }) => {
   const { theme } = useContext(ThemeContext);
-
   const isDark = theme === "dark";
-
-  const [isSignupOpen ,setIsSignupOpen]=useState(false);
-
-  if(isSignupOpen){
-    return<Signup isOpen={true} onClose={()=> setIsSignupOpen(false)}/>
-  }
 
   return (
     <AnimatePresence>
@@ -50,18 +42,40 @@ const Login = ({ isOpen, onClose }) => {
                 isDark ? "border-gray-700" : "border-gray-200"
               }`}
             >
-              <h2 className="text-2xl font-semibold">
-                Login to Your Account
-              </h2>
+              <h2 className="text-2xl font-semibold">Create an Account</h2>
               <p
                 className={`text-sm ${
                   isDark ? "text-gray-400" : "text-gray-500"
                 }`}
               >
-                Sign in to continue to your account
+                Sign up to get started
               </p>
             </div>
+
             <form className="space-y-4">
+              <div>
+                <label
+                  htmlFor="username"
+                  className={`block mb-2 text-sm font-medium ${
+                    isDark ? "text-gray-200" : "text-gray-700"
+                  }`}
+                >
+                  Username
+                </label>
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="Your name"
+                  className={`w-full px-3 py-2 rounded-lg border text-sm outline-none
+                    ${
+                      isDark
+                        ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500"
+                        : "bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500"
+                    }
+                  `}
+                />
+              </div>
+
               <div>
                 <label
                   htmlFor="email"
@@ -76,9 +90,11 @@ const Login = ({ isOpen, onClose }) => {
                   id="email"
                   placeholder="you@example.com"
                   className={`w-full px-3 py-2 rounded-lg border text-sm outline-none
-                    ${isDark
-                      ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500"
-                      : "bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500"}
+                    ${
+                      isDark
+                        ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500"
+                        : "bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500"
+                    }
                   `}
                 />
               </div>
@@ -97,52 +113,21 @@ const Login = ({ isOpen, onClose }) => {
                   id="password"
                   placeholder="••••••••"
                   className={`w-full px-3 py-2 rounded-lg border text-sm outline-none
-                    ${isDark
-                      ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500"
-                      : "bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500"}
+                    ${
+                      isDark
+                        ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500"
+                        : "bg-gray-50 border-gray-300 text-gray-900 focus:ring-blue-500"
+                    }
                   `}
                 />
               </div>
 
-              <div className="flex justify-between items-center text-sm">
-                <label
-                  className={`flex items-center space-x-2 ${
-                    isDark ? "text-gray-300" : "text-gray-700"
-                  }`}
-                >
-                  <input type="checkbox" className="w-4 h-4 rounded" />
-                  <span>Remember me</span>
-                </label>
-                <a
-                  href="#"
-                  className="text-blue-600 hover:underline"
-                >
-                  Forgot password?
-                </a>
-              </div>
-
               <button
                 type="submit"
-                className={`w-full font-medium rounded-lg py-2.5 transition-all duration-200
-                  ${
-                    isDark
-                      ? "bg-blue-600 hover:bg-blue-700 text-white"
-                      : "bg-blue-600 hover:bg-blue-700 text-white"
-                  }`}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg py-2.5 transition-all duration-200"
               >
-                Login
+                Sign Up
               </button>
-
-              <p
-                className={`text-sm text-center ${
-                  isDark ? "text-gray-400" : "text-gray-500"
-                }`}
-              >
-                Don’t have an account?{" "}
-                <button type="button" onClick={()=>{setIsSignupOpen(true)}} className="text-blue-600 hover:underline">
-                  Sign up
-                </button>
-              </p>
             </form>
           </motion.div>
         </motion.div>
@@ -151,4 +136,5 @@ const Login = ({ isOpen, onClose }) => {
   );
 };
 
-export default Login;
+export default Signup;
+

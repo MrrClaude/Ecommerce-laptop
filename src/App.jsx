@@ -11,8 +11,6 @@ import Gaming from "./ProductPages/Gaming";
 import AddToCartModal from "./component/AddToCartModal";
 import PaymentPage from "./component/PaymentPage";
 import Page500 from "./pages/Page500";
-// import Business from "./ProductPages/Business";
-// import Accessories from "./ProductPages/Accessories";
 
 const App = () => {
   const { theme } = useContext(ThemeContext);
@@ -31,8 +29,6 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/gaming" element={<Gaming />} />
-          {/* <Route path="/business" element={<Business/>}/>
-          <Route path="/accessories" element={<Accessories/>}/> */}
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/service" element={<Service />} />
           <Route path="/payment" element={<PaymentPage />} />
