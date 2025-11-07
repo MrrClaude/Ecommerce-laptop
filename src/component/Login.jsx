@@ -32,7 +32,7 @@ const Login = ({ isOpen, onClose }) => {
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className={`w-full max-w-md p-6 rounded-2xl shadow-2xl relative transition-colors duration-300
-              ${isDark ? "bg-gray-800 text-white" : "bg-white text-gray-900"}
+              ${isDark ? "bg-gray-800 text-white" : "bg-white text-gray-800"}
             `}
           >
             <button
