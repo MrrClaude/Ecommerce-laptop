@@ -2,7 +2,6 @@
 import React, { useContext ,useState} from "react";
 import ThemeContext from "../context/themeProvder";
 import { motion, AnimatePresence } from "framer-motion";
-import SignupPage from "./SignupPage";
 
 
 const Login = ({ isOpen, onClose }) => {
@@ -10,11 +9,11 @@ const Login = ({ isOpen, onClose }) => {
 
   const isDark = theme === "dark";
 
-  const [isSignupOpen ,setIsSignupOpen]=useState(false);
+  // const [isSignupOpen ,setIsSignupOpen]=useState(false);
 
-  if(isSignupOpen){
-    return<SignupPage isOpen={true} onClose={()=> setIsSignupOpen(false)}/>
-  }
+  // if(isSignupOpen){
+  //   return<SignupPage isOpen={true} onClose={()=> setIsSignupOpen(false)}/>
+  // }
 
   return (
     <AnimatePresence>
@@ -140,7 +139,8 @@ const Login = ({ isOpen, onClose }) => {
                 }`}
               >
                 Don’t have an account?{" "}
-                <button type="button" onClick={()=>{setIsSignupOpen(true)}} className="text-blue-600 hover:underline">
+                <button type="button"  className="text-blue-600 hover:underline"> 
+                  {/* onClick={()=>{setIsSignupOpen(true)}} */}
                   Sign up
                 </button>
               </p>
