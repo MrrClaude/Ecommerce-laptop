@@ -404,8 +404,17 @@ const Gaming = () => {
     >
       <Carousel />
 
-      {/* Search bar */}
-      <div className="max-w-3xl mx-auto px-4 mb-8 mt-8">
+      {/* Title */}
+      <h1 className="font-bold text-[3rem] text-center mt-6 font-serif">
+        Laptop Gaming
+      </h1>
+
+      <div className="flex flex-col md:flex-row md:items-center  md:justify-evenly gap-6 px-4 w-full mt-10 mb-6 ">
+        {/* Search bar */}
+  
+
+      {/* Brand Filter Buttons */}
+       <div className="max-w-3xl w-full">
         <div ref={searchRef} className="relative">
           <div
             className={`flex items-center gap-3 px-6 py-4 rounded-full shadow-lg transition-all duration-300 ${
@@ -429,8 +438,8 @@ const Gaming = () => {
               placeholder="Search for gaming laptops..."
               className={`flex-1 text-lg outline-none bg-transparent ${
                 theme === "dark"
-                  ? "text-white placeholder-gray-400"
-                  : "text-gray-800 placeholder-gray-500"
+                  ? "text-white placeholder-gray-400 border-none"
+                  : "text-gray-800 placeholder-gray-500 border-none"
               }`}
             />
             {query && (
@@ -516,9 +525,7 @@ const Gaming = () => {
           )}
         </div>
       </div>
-
-      {/* Brand Filter Buttons */}
-      <div className="flex flex-wrap justify-center gap-3 mb-10 px-4">
+      <div className="flex flex-wrap justify-center gap-3 px-4">
         {brands.map((brand) => (
           <button
             key={brand}
@@ -537,11 +544,7 @@ const Gaming = () => {
           </button>
         ))}
       </div>
-
-      {/* Title */}
-      <h1 className="font-bold text-[3rem] text-center m-3 font-serif">
-        Laptop Gaming
-      </h1>
+      </div>
 
       {/* Product Grid */}
       <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5">
