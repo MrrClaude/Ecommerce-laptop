@@ -81,7 +81,7 @@ const Home = () => {
         }
       `}
           >
-           <Link to="/about">Explor more</Link>
+           <Link to="/about">Explor Now</Link>
           </button>
           </div>
         </div>

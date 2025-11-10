@@ -275,52 +275,96 @@ const cards = [
   },
   {
     id: 10,
-    img: "https://m.media-amazon.com/images/I/71x+2v3yZOL._AC_SL1500_.jpg",
+    img: "https://dlcdnwebimgs.asus.com/gain/240A80BA-EBF7-443F-90EA-119116DA83D3/w1000/h732",
     brand: "ASUS",
-    smallImg: [],
+    smallImg: ["https://dlcdnwebimgs.asus.com/gain/E0D8F1EA-DCC6-4050-90CB-05E553C2D9EB/w1000/h732",
+      "https://dlcdnwebimgs.asus.com/gain/7583764C-92E3-413D-A5AD-4CB7D9713802/w1000/h732",
+      "https://dlcdnwebimgs.asus.com/gain/86E7B894-94D9-41B7-8622-134D328D2F47/w1000/h732",
+      "https://dlcdnwebimgs.asus.com/gain/04850300-D8E9-4317-A316-6C19AE3FD2A9/w1000/h732",
+    ],
     title: "ASUS ROG Zephyrus G14",
     desc: "Compact gaming powerhouse with Ryzen 9 and RTX 4060 performance in a sleek magnesium-aluminum body.",
     stars: new Array(5).fill(true),
     list: [
-      "AMD Ryzen 9 7940HS processor",
-      "NVIDIA GeForce RTX 4060",
-      "14-inch QHD+ display",
+      "AMD Ryzen 9 7940HS processor (8-core/16-thread, up to 5.2 GHz)",
+      "NVIDIA GeForce RTX 4060 Laptop GPU (8GB GDDR6 VRAM)",
+      "14-inch QHD+ (2560 x 1600), 165Hz refresh rate, 16:10 aspect ratio",
+      "ROG Intelligent Cooling with Liquid Metal on CPU",
+      "Sleek chassis made from magnesium-aluminum alloy",
+      "Mux Switch / NVIDIA Advanced Optimus support",
     ],
     rating: "4.8",
     price: 1600,
   },
   {
     id: 11,
-    img: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-silver-select-202310?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1697311139743",
-    brand: "MAC",
-    smallImg: [],
-    title: "MacBook Pro M3",
-    desc: "Supercharged by the Apple M3 chip for unbeatable creative and performance workflows.",
-    stars: new Array(5).fill(true),
-    list: [
-      "Apple M3 chip",
-      "14-inch Liquid Retina XDR display",
-      "Up to 22 hours battery life",
+    img: "https://dlcdnwebimgs.asus.com/gain/29ADB838-6337-4979-9CD7-09ECB34BA05F/w1000/h732",
+    brand: "ASUS",
+    smallImg: ["https://dlcdnwebimgs.asus.com/gain/6CAF86A2-1F1B-462F-AE43-8A4E748134F8/w1000/h732",
+      "https://dlcdnwebimgs.asus.com/gain/6461E487-30F1-457B-A1D7-C6249E4BB2E2/w1000/h732",
+      "https://dlcdnwebimgs.asus.com/gain/0E389DF1-747D-4E7A-91D0-C2B249F7BB5F/w1000/h732",
+      "https://dlcdnwebimgs.asus.com/gain/0CBCC03C-7D99-4B82-A8A7-C0B641A62807/w1000/h732",
     ],
-    rating: "4.9",
-    price: 2500,
+    title: "ASUS ROG Strix Scar 18",
+    desc: "An esports desktop replacement with a massive display and peak CPU/GPU performance.",
+    stars: new Array(4).fill(true),
+    list: [
+      "Up to Intel Core i9-13980HX processor",
+      "Up to NVIDIA GeForce RTX 4090 Laptop GPU",
+      "18-inch ROG Nebula Display, QHD+ (2560x1600), 240Hz",
+      "Tri-Fan Technology with Full-Surround Vents",
+      "Per-Key RGB keyboard and Light Bar accent lighting",
+    ],
+    rating: "4.7",
+    price: 3200,
   },
   {
     id: 12,
-    img: "https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8MTE0MzZ8aW1hZ2UvanBlZ3xoYjYvaGE1LzE0MDU1NTYxNzQzMTgyLmpwZ3w2YjQ3OGE1N2VmNGY5NjhlMTc3NjY3NjRhMjk3OTRlZTlmZWE3YTg1MTk1ZTk0NzJiNzJiNmE0OGExZWIxNDI4",
+    img: "https://p3-ofp.static.pub//fes/cms/2025/10/12/1do9mj5kljszet4y9jf0kkmcxssd6p564917.png?width=400&height=400",
     brand: "LENOVO",
-    smallImg: [],
+    smallImg: [
+      "https://p1-ofp.static.pub//fes/cms/2025/10/12/cq22o5msdad5to7arfxsmmf6bsu6n4599010.png?width=400&height=400",
+      "https://p3-ofp.static.pub//fes/cms/2025/02/14/wf3yter8p98sqcszv7cpz82gzp8564355404.png?width=400&height=400",
+      "https://p3-ofp.static.pub//fes/cms/2025/02/14/zdnf282vrph589nztymxhhpwuc0ekp431445.png?width=400&height=400",
+      "https://p2-ofp.static.pub//fes/cms/2025/02/14/qp3bar90s2o8av6ba6hee6u1h4d435278916.png?width=400&height=400",
+    ],
     title: "Lenovo Legion Pro 7i",
     desc: "Unleash extreme gaming power with the latest Intel® Core™ i9 and RTX 4080 GPU.",
     stars: new Array(4).fill(true),
     list: [
-      "Intel Core i9 processor",
-      "NVIDIA GeForce RTX 4080",
-      "16-inch WQXGA display",
+      "Up to Intel Core i9-13900HX processor (24 Cores, 32 Threads)",
+      "NVIDIA GeForce RTX 4080 Laptop GPU (12GB GDDR6, 175W max TGP)",
+      "16-inch WQXGA (2560 x 1600, 16:10), up to 240Hz VRR, 500 nits",
+      "Legion ColdFront 5.0 advanced thermal system",
+      "99.99Whr battery with Super Rapid Charge",
+      "Per-key RGB backlit keyboard (Legion TrueStrike keyboard)",
     ],
     rating: "4.6",
     price: 1800,
   },
+  {
+    id: 13,
+    img: "https://p3-ofp.static.pub//fes/cms/2024/06/21/wz51p9zb8ooybvmbglof1ie2eijjq0610231.png?width=400&height=400",
+    brand: "LENOVO",
+    smallImg: ["https://p3-ofp.static.pub/fes/cms/2023/03/17/wn4gt5174qabpld8k11y1qp3l0i87h510496.png?width=400&height=400",
+      "https://p4-ofp.static.pub/fes/cms/2023/03/17/0ttj5jb0qticl1r0x93u2x0suklesp369337.png?width=400&height=400",
+      "https://p3-ofp.static.pub/fes/cms/2023/03/17/sxovrdsk3gip0szufmiw9joxcscwov375150.png?width=400&height=400",
+      "https://p4-ofp.static.pub/fes/cms/2023/03/17/ejki6kbtb3kl8i27e25qh8agfcmktd918277.png?width=400&height=400"
+    ],
+    title: "Lenovo Legion Slim 7i",
+    desc: "A powerful gaming machine that maintains a slim profile, offering a balance between portability and raw performance.",
+    stars: new Array(4).fill(true),
+    list: [
+      "Up to Intel Core i9-13900H processor",
+      "Up to NVIDIA GeForce RTX 4070 Laptop GPU",
+      "16-inch WQXGA display, up to 240Hz refresh rate",
+      "All-metal chassis for a premium and durable build",
+      "Advanced cooling tuned for a slim form factor",
+    ],
+    rating: "4.4",
+    price: 1700,
+  },
+
 ];
 
 const Gaming = () => {
@@ -332,7 +376,7 @@ const Gaming = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [selectedBrand, setSelectedBrand] = useState("All");
   const searchRef = useRef(null);
-  const productsPerPage = 20;
+  const productsPerPage = 12;
 
   const { theme } = useContext(ThemeContext);
   const { addToCart } = useContext(CartContext);

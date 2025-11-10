@@ -16,7 +16,7 @@ const MSILaptopFeatures = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          WHY CHOOSE MSI?
+          WHY CHOOSE OUR PRODUCT?
         </motion.span>
         <motion.h2
           className="text-4xl md:text-6xl font-bold mt-4 bg-clip-text text-transparent bg-gradient-to-r from-accent-pink to-primary-500"
