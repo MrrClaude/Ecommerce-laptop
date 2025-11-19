@@ -78,6 +78,16 @@ const Footer = () => {
                   Gaming Laptops
                 </Link>
               </li>
+              <li>
+                <Link to="/business" className="hover:underline">
+                  Business Laptops
+                </Link>
+              </li>
+              <li>
+                <Link to="/accessories" className="hover:underline">
+                  Accesseri
+                </Link>
+              </li>
               {/* <li>
                 <Link to="/business" className="hover:underline">
                   Business Laptops

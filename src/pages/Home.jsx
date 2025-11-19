@@ -3,6 +3,7 @@ import ThemeContext from "../context/themeProvder";
 import MSILaptopFeatures from "../mini-page/MSILaptopFeatures";
 import "../StyleCss/animation.css";
 import { Link } from "react-router-dom";
+import { Link2 } from "lucide-react";
 const images = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRZQ03VBPkcuVFGvUORHts5b-nJFR-9Gj5FQ&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpOF89Td-0yRsmWjNz5pzhpjxjcziJ8-YOFw&s",
@@ -108,8 +109,8 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
-              <a
-                href="#"
+              <Link
+                to="/business"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
               >
                 <img
@@ -124,7 +125,7 @@ const Home = () => {
                 <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
                   Content Creator & Business Laptops:
                 </span>
-              </a>
+              </Link>
               <Link
                  to="/gaming"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
@@ -142,8 +143,8 @@ const Home = () => {
                   Gaming Laptop
                 </span>
               </Link>
-              <a
-                href="#"
+              <Link
+                to="/accessories"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
               >
                 <img
@@ -158,9 +159,9 @@ const Home = () => {
                 <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
                   Accessories
                 </span>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
               >
                 <img
@@ -175,7 +176,7 @@ const Home = () => {
                 <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
                   Everyday Use
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

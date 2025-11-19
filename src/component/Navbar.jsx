@@ -1,18 +1,15 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMoon, IoSunny } from "react-icons/io5";
-import { FaCartShopping } from "react-icons/fa6";
-import {
-  FaEnvelopeOpenText,
-  FaHome,
-  FaLaptopCode,
-} from "react-icons/fa";
-import { RiInformationLine } from "react-icons/ri";
+import { NavLink, useLocation } from "react-router-dom";
+import { FaEnvelopeOpenText, FaHome, FaLaptopCode } from "react-icons/fa";
+import { RiInformationLine, RiShoppingBasketLine } from "react-icons/ri";
 import { HiMiniComputerDesktop } from "react-icons/hi2";
 import ThemeContext from "../context/themeProvder";
 import CartContext from "../context/CartContext";
 import imgLogo from "/Artboard1.png";
 import Login from "./Login";
+import { CgProfile } from "react-icons/cg";
 
 const Navbar = ({ onOpenCart }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -95,28 +92,18 @@ const Navbar = ({ onOpenCart }) => {
             </button>
 
             <button
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 
-                ${
-                  theme === "dark"
-                    ? "bg-indigo-600 hover:bg-indigo-700 text-white"
-                    : "bg-blue-600 hover:bg-blue-700 text-white"
-                }`}
+              className="px-4 text-[2rem] font-medium rounded-lg transition-all duration-200 hover:text-blue-500"
               onClick={() => setIsLoginOpen(true)}
             >
-              Login
+              <CgProfile />
             </button>
 
             {/* Cart */}
             <button
               onClick={onOpenCart}
-              className={`relative flex items-center px-2 py-2 text-sm font-medium rounded-full transition-all duration-200 
-                ${
-                  theme === "dark"
-                    ? "bg-green-600 hover:bg-green-700 text-white"
-                    : "bg-green-500 hover:bg-green-600 text-white"
-                }`}
+              className="relative flex items-center px-1 py-2 text-[2rem] font-medium rounded-full transition-all duration-200"
             >
-              <FaCartShopping className="text-lg" />
+              <RiShoppingBasketLine />
               {cartItems.length > 0 && (
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full px-2">
                   {cartItems.length}
@@ -139,81 +126,205 @@ const Navbar = ({ onOpenCart }) => {
               isMenuOpen ? "block" : "hidden"
             } w-full md:flex md:w-auto md:order-1`}
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent md:dark:bg-transparent">
-              <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
-                <FaHome />
-                <Link to="/" onClick={handleLinkClick}>Home</Link>
-              </li>
+            {(() => {
+              const location = useLocation();
+              const isProductActive =
+                location.pathname.startsWith("/gaming") ||
+                location.pathname.startsWith("/business") ||
+                location.pathname.startsWith("/accessories");
 
-              <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
-                <RiInformationLine className="text-lg" />
-                <Link to="/about" onClick={handleLinkClick}>About</Link>
-              </li>
+              return (
+                <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent md:dark:bg-transparent">
+                  {/* Home */}
+                  <li>
+                    <NavLink
+                      to="/"
+                      onClick={handleLinkClick}
+                      className={({ isActive }) =>
+                        `flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${
+                          isActive
+                            ? "text-blue-600 dark:text-blue-400 font-semibold"
+                            : ""
+                        }`
+                      }
+                    >
+                      {({ isActive }) => (
+                        <>
+                          <FaHome
+                            className={`transition-colors ${
+                              isActive
+                                ? "text-blue-600 dark:text-blue-400"
+                                : ""
+                            }`}
+                          />
+                          Home
+                        </>
+                      )}
+                    </NavLink>
+                  </li>
 
-              {/* Dropdown */}
-              <li className="relative dropdown-area">
-                <button
-                  onMouseEnter={() =>
-                    window.innerWidth >= 768 && setIsDropdownOpen(true)
-                  }
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400"
-                >
-                  <HiMiniComputerDesktop className="text-lg" />
-                  Product ▼
-                </button>
+                  {/* About */}
+                  <li>
+                    <NavLink
+                      to="/about"
+                      onClick={handleLinkClick}
+                      className={({ isActive }) =>
+                        `flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${
+                          isActive
+                            ? "text-blue-600 dark:text-blue-400 font-semibold"
+                            : ""
+                        }`
+                      }
+                    >
+                      {({ isActive }) => (
+                        <>
+                          <RiInformationLine
+                            className={`text-lg transition-colors ${
+                              isActive
+                                ? "text-blue-600 dark:text-blue-400"
+                                : ""
+                            }`}
+                          />
+                          About
+                        </>
+                      )}
+                    </NavLink>
+                  </li>
 
-                {isDropdownOpen && (
-                  <div
-                    className={`absolute left-0 mt-2 w-64 border rounded-lg shadow-lg ${
-                      theme === "dark"
-                        ? "bg-gradient-to-tr from-gray-900 via-gray-950 to-black text-white border-t border-gray-700"
-                        : "bg-white border-gray-200"
-                    }`}
-                  >
-                    <ul className="grid grid-cols-2 gap-2 p-3">
-                      <li>
-                        <Link
-                          to="/gaming"
-                          onClick={handleLinkClick}
-                          className="block p-2 rounded hover:text-blue-700"
-                        >
-                          Gaming-laptop
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/business"
-                          onClick={handleLinkClick}
-                          className="block p-2 rounded hover:text-blue-700"
-                        >
-                          Business-laptop
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="/accessories"
-                          onClick={handleLinkClick}
-                          className="block p-2 rounded hover:text-blue-700"
-                        >
-                          Accessories
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                )}
-              </li>
+                  {/* Product Dropdown */}
+                  <li className="relative dropdown-area">
+                    <button
+                      onMouseEnter={() =>
+                        window.innerWidth >= 768 && setIsDropdownOpen(true)
+                      }
+                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                      className={`flex items-center py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${
+                        isProductActive
+                          ? "text-blue-600 dark:text-blue-400 font-semibold"
+                          : ""
+                      }`}
+                    >
+                      <HiMiniComputerDesktop
+                        className={`text-lg transition-colors ${
+                          isProductActive
+                            ? "text-blue-600 dark:text-blue-400"
+                            : ""
+                        }`}
+                      />
+                      Product ▼
+                    </button>
 
-              <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
-                <FaEnvelopeOpenText className="text-lg" />
-                <Link to="/contact" onClick={handleLinkClick}>Contact Us</Link>
-              </li>
+                    {isDropdownOpen && (
+                      <div
+                        className={`absolute left-0 mt-2 w-64 border rounded-lg shadow-lg ${
+                          theme === "dark"
+                            ? "bg-gradient-to-tr from-gray-900 via-gray-950 to-black text-white border-t border-gray-700"
+                            : "bg-white border-gray-200"
+                        }`}
+                      >
+                        <ul className="grid grid-cols-2 gap-2 p-3">
+                          <li>
+                            <NavLink
+                              to="/gaming"
+                              onClick={handleLinkClick}
+                              className={({ isActive }) =>
+                                `block p-2 rounded hover:text-blue-700 transition-colors ${
+                                  isActive ? "text-blue-600 font-semibold" : ""
+                                }`
+                              }
+                            >
+                              Gaming-laptop
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/business"
+                              onClick={handleLinkClick}
+                              className={({ isActive }) =>
+                                `block p-2 rounded hover:text-blue-700 transition-colors ${
+                                  isActive ? "text-blue-600 font-semibold" : ""
+                                }`
+                              }
+                            >
+                              Business-laptop
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/accessories"
+                              onClick={handleLinkClick}
+                              className={({ isActive }) =>
+                                `block p-2 rounded hover:text-blue-700 transition-colors ${
+                                  isActive ? "text-blue-600 font-semibold" : ""
+                                }`
+                              }
+                            >
+                              Accessories
+                            </NavLink>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+                  </li>
 
-              <li className="flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400">
-                <FaLaptopCode className="text-lg" />
-                <Link to="/service" onClick={handleLinkClick}>Service</Link>
-              </li>
-            </ul>
+                  {/* Contact */}
+                  <li>
+                    <NavLink
+                      to="/contact"
+                      onClick={handleLinkClick}
+                      className={({ isActive }) =>
+                        `flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${
+                          isActive
+                            ? "text-blue-600 dark:text-blue-400 font-semibold"
+                            : ""
+                        }`
+                      }
+                    >
+                      {({ isActive }) => (
+                        <>
+                          <FaEnvelopeOpenText
+                            className={`text-lg transition-colors ${
+                              isActive
+                                ? "text-blue-600 dark:text-blue-400"
+                                : ""
+                            }`}
+                          />
+                          Contact Us
+                        </>
+                      )}
+                    </NavLink>
+                  </li>
+
+                  {/* Service */}
+                  <li>
+                    <NavLink
+                      to="/service"
+                      onClick={handleLinkClick}
+                      className={({ isActive }) =>
+                        `flex items-center gap-1 py-2 px-3 hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${
+                          isActive
+                            ? "text-blue-600 dark:text-blue-400 font-semibold"
+                            : ""
+                        }`
+                      }
+                    >
+                      {({ isActive }) => (
+                        <>
+                          <FaLaptopCode
+                            className={`text-lg transition-colors ${
+                              isActive
+                                ? "text-blue-600 dark:text-blue-400"
+                                : ""
+                            }`}
+                          />
+                          Service
+                        </>
+                      )}
+                    </NavLink>
+                  </li>
+                </ul>
+              );
+            })()}
           </div>
         </div>
       </nav>

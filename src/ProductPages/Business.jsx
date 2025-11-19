@@ -384,7 +384,8 @@ const Business = () => {
     if (query.trim()) {
       const searchTerm = query.toLowerCase();
       filtered = filtered.filter((p) =>
-        p.title.toLowerCase().includes(searchTerm)
+        p.title.toLowerCase().includes(searchTerm)||
+      p.brand.toLowerCase().includes(searchTerm)
       );
       setFilteredSuggestions(filtered);
       setShowDropdown(true);
